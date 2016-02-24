@@ -1,0 +1,278 @@
+NOTICE: pid::4936 2016-01-18 22:58:02     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:96:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::8132 2016-01-18 22:59:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::8132 2016-01-18 22:59:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129154999170,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::8132 2016-01-18 22:59:51     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129191162906,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::8132 2016-01-18 22:59:51     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129191955734,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::8132 2016-01-18 22:59:59     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129199189305,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::8132 2016-01-18 23:00:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129206598600,  type: 'pv',  method: 'GET',  url: '/runTask',  userInfo: undefined }
+NOTICE: pid::6188 2016-01-18 23:01:11     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6188 2016-01-18 23:01:11     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129271909719,  type: 'pv',  method: 'GET',  url: '/runTask',  userInfo: undefined }
+NOTICE: pid::6188 2016-01-18 23:01:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129277888958,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7936 2016-01-18 23:01:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7936 2016-01-18 23:01:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129295342140,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7804 2016-01-18 23:01:44     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7804 2016-01-18 23:01:44     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129304131714,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7604 2016-01-18 23:02:00     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7604 2016-01-18 23:02:00     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129320477433,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::4800 2016-01-18 23:02:05     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::4800 2016-01-18 23:02:05     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129325848583,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::4800 2016-01-18 23:02:28     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129348184461,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6496 2016-01-18 23:03:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6496 2016-01-18 23:03:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129397364752,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3944 2016-01-18 23:03:30     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::3944 2016-01-18 23:03:30     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129410366680,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7940 2016-01-18 23:03:40     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7940 2016-01-18 23:03:40     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129420633771,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:03:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7556 2016-01-18 23:03:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129422097244,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:03:43     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129423779691,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7980 2016-01-18 23:04:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7980 2016-01-18 23:04:19     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129459078935,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7552 2016-01-18 23:05:11     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7552 2016-01-18 23:05:12     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129512032664,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7552 2016-01-18 23:05:25     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129525878447,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7688 2016-01-18 23:06:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7688 2016-01-18 23:06:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129580793634,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7688 2016-01-18 23:06:23     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129583461754,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7688 2016-01-18 23:06:23     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129583984812,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7688 2016-01-18 23:06:24     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129584144530,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7688 2016-01-18 23:06:27     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453129587187577,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::5800 2016-01-18 23:07:40     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::5800 2016-01-18 23:07:40     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129660424414,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::5800 2016-01-18 23:07:44     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129664036596,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6736 2016-01-18 23:08:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6736 2016-01-18 23:08:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129694690092,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6736 2016-01-18 23:08:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129694694719,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:09:12     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7556 2016-01-18 23:09:12     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129752631255,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:09:12     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129752639620,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:09:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129757625263,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:09:25     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129765891275,  type: 'pv',  method: 'GET',  url: '/get',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:09:30     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129770858513,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7556 2016-01-18 23:09:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129775494706,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6392 2016-01-18 23:09:58     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6392 2016-01-18 23:09:58     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129798752032,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6392 2016-01-18 23:09:58     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129798758792,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6392 2016-01-18 23:10:08     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129808578003,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6392 2016-01-18 23:10:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129809188795,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6392 2016-01-18 23:10:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129809439425,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6392 2016-01-18 23:10:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129809585452,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6392 2016-01-18 23:10:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129809779078,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::7604 2016-01-18 23:10:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7604 2016-01-18 23:10:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129842351620,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7604 2016-01-18 23:10:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129842359842,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:10:47     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6204 2016-01-18 23:10:47     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129847974528,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:10:47     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129847982492,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:10:53     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129853972766,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:29     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129889245787,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:31     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129891408068,  type: 'pv',  method: 'GET',  url: '/getuser',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:33     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129893573233,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129895221795,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129895466933,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129895612315,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129895736083,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6204 2016-01-18 23:11:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129895897844,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::208 2016-01-18 23:12:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::208 2016-01-18 23:12:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129935905741,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::208 2016-01-18 23:12:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129935946604,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::208 2016-01-18 23:12:19     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129939096525,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::208 2016-01-18 23:12:24     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129944632038,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::2496 2016-01-18 23:12:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::2496 2016-01-18 23:12:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129970931970,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::2496 2016-01-18 23:12:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453129970939446,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::1572 2016-01-18 23:14:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::1572 2016-01-18 23:14:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453130054946887,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::1572 2016-01-18 23:14:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453130054954076,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::1572 2016-01-18 23:14:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453130057495347,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::1572 2016-01-18 23:14:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453130058560040,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::1572 2016-01-18 23:14:19     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:54:11) { logid: 1453130059378629,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7872 2016-01-18 23:16:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7872 2016-01-18 23:16:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130210158440,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7872 2016-01-18 23:16:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130210223853,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7872 2016-01-18 23:16:53     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130213319780,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7872 2016-01-18 23:16:53     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130213453193,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7608 2016-01-18 23:17:33     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7608 2016-01-18 23:17:33     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130253429508,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6248 2016-01-18 23:17:54     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6248 2016-01-18 23:17:54     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130274161659,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6248 2016-01-18 23:17:54     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130274248150,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7604 2016-01-18 23:18:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7604 2016-01-18 23:18:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130295849611,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7604 2016-01-18 23:18:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130295927072,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::1912 2016-01-18 23:18:30     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::1912 2016-01-18 23:18:30     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130310959744,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::1912 2016-01-18 23:18:31     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130311036430,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6548 2016-01-18 23:19:03     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6548 2016-01-18 23:19:03     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130343389569,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6548 2016-01-18 23:19:03     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130343448599,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6548 2016-01-18 23:19:04     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130344883860,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6548 2016-01-18 23:19:04     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130344956652,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6548 2016-01-18 23:19:08     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130348969247,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6976 2016-01-18 23:19:27     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6976 2016-01-18 23:19:27     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130367584296,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6976 2016-01-18 23:19:27     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130367686771,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::8088 2016-01-18 23:19:39     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6680 2016-01-18 23:19:45     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6564 2016-01-18 23:19:57     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6564 2016-01-18 23:19:58     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130398893612,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6564 2016-01-18 23:20:00     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130400857373,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6564 2016-01-18 23:20:01     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130401837203,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6564 2016-01-18 23:20:02     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130402048276,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6564 2016-01-18 23:20:02     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130402236956,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6448 2016-01-18 23:20:05     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6448 2016-01-18 23:20:05     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130405614675,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::3484 2016-01-18 23:20:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130406860590,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130406869807,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:07     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130407383002,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:07     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130407559991,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:07     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130407740564,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130420062965,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130420270668,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130420630720,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::3484 2016-01-18 23:20:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130420858710,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::8160 2016-01-18 23:20:34     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::8160 2016-01-18 23:20:34     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130434943391,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7048 2016-01-18 23:20:47     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7048 2016-01-18 23:20:48     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130448429465,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::8028 2016-01-18 23:21:19     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::8164 2016-01-18 23:21:30     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6288 2016-01-18 23:21:52     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6652 2016-01-18 23:22:05     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::1252 2016-01-18 23:22:07     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::76 2016-01-18 23:22:26     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7288 2016-01-18 23:23:11     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7536 2016-01-18 23:23:12     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6904 2016-01-18 23:23:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6904 2016-01-18 23:23:21     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130601620277,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::6388 2016-01-18 23:23:56     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6388 2016-01-18 23:24:02     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130642890961,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7604 2016-01-18 23:24:37     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7604 2016-01-18 23:24:55     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130695800694,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7748 2016-01-18 23:26:20     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7748 2016-01-18 23:26:22     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130782403329,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7748 2016-01-18 23:26:22     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130782889070,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7748 2016-01-18 23:26:32     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453130792330829,  type: 'pv',  method: 'GET',  url: '/getUser?uid=adsasd',  userInfo: undefined }
+NOTICE: pid::6968 2016-01-18 23:29:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6968 2016-01-18 23:38:37     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453131517200014,  type: 'pv',  method: 'GET',  url: '/getUser?uid=adsasd',  userInfo: undefined }
+NOTICE: pid::2852 2016-01-19 20:49:54     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::2852 2016-01-19 20:49:57     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453207797902912,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::2852 2016-01-19 20:49:57     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453207797975116,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::2852 2016-01-19 20:50:05     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453207805701962,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::2852 2016-01-19 20:50:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453207806858521,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7040 2016-01-21 00:09:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7040 2016-01-21 00:09:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306190565463,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7040 2016-01-21 00:09:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306190691761,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7748 2016-01-21 00:11:08     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7748 2016-01-21 00:11:08     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306268166546,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7748 2016-01-21 00:11:08     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306268259589,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::8072 2016-01-21 00:11:23     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::8072 2016-01-21 00:11:23     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306283326030,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::8072 2016-01-21 00:11:23     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306283370650,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6840 2016-01-21 00:11:28     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6840 2016-01-21 00:11:28     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306288845685,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6840 2016-01-21 00:11:28     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306288889002,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::4264 2016-01-21 00:12:53     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::4264 2016-01-21 00:12:54     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306374058174,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::4264 2016-01-21 00:12:54     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306374104317,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::4264 2016-01-21 00:13:58     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306438486259,  type: 'pv',  method: 'GET',  url: '/getUser?uid=1',  userInfo: undefined }
+NOTICE: pid::6332 2016-01-21 00:16:23     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6332 2016-01-21 00:16:24     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306584719634,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6332 2016-01-21 00:16:24     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306584805150,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6332 2016-01-21 00:16:27     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306587912267,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4972 2016-01-21 00:17:59     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::4972 2016-01-21 00:17:59     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306679719925,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::4972 2016-01-21 00:17:59     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306679726624,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4972 2016-01-21 00:17:59     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306679812074,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::4972 2016-01-21 00:18:02     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306682710711,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4972 2016-01-21 00:18:10     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306690540477,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4972 2016-01-21 00:18:12     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306692825146,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4972 2016-01-21 00:18:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306694694742,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4248 2016-01-21 00:19:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::4248 2016-01-21 00:19:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306749347129,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::4248 2016-01-21 00:19:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306749357485,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4248 2016-01-21 00:19:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306749490146,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::4248 2016-01-21 00:19:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306758013299,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4248 2016-01-21 00:19:48     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306788781889,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4576 2016-01-21 00:20:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::4576 2016-01-21 00:20:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306815732161,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::4576 2016-01-21 00:20:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306815744173,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::4576 2016-01-21 00:20:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306815846012,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::4576 2016-01-21 00:20:19     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306819370367,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::6592 2016-01-21 00:20:39     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6592 2016-01-21 00:20:39     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306839802160,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6592 2016-01-21 00:20:39     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306839811821,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::6592 2016-01-21 00:20:39     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306839905270,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::4628 2016-01-21 00:21:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::4628 2016-01-21 00:21:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306869507695,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::4628 2016-01-21 00:21:09     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306869557469,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::2328 2016-01-21 00:21:11     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::2328 2016-01-21 00:21:11     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306871148265,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::2328 2016-01-21 00:21:11     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306871195997,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::3792 2016-01-21 00:21:13     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::3792 2016-01-21 00:21:13     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306873227108,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::3792 2016-01-21 00:21:13     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306873272209,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:21:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7780 2016-01-21 00:21:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306875227716,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:21:15     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306875285467,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:21:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306877267147,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:21:29     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306889714700,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:21:47     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306907530392,  type: 'pv',  method: 'GET',  url: '/saveUser?name=xiaoguang&password=1985xiao&email=tut.bear@gmail.com',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:19     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306939068572,  type: 'pv',  method: 'GET',  url: '/getUser',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:24     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306944389760,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:27     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306947283911,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:35     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306955848558,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:36     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306956300542,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:36     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306956503329,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:36     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306956668156,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:36     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306956840055,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::7780 2016-01-21 00:22:36     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306956991216,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::5192 2016-01-21 00:23:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::5192 2016-01-21 00:23:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306997746531,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::5192 2016-01-21 00:23:17     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453306997792410,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::5192 2016-01-21 00:23:22     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307002208617,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::5192 2016-01-21 00:23:25     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307005381553,  type: 'pv',  method: 'GET',  url: '/getUser?id=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::5192 2016-01-21 00:23:40     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307020680778,  type: 'pv',  method: 'GET',  url: '/getUser?uid=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::6260 2016-01-21 00:30:32     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6260 2016-01-21 00:30:32     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307432703255,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6260 2016-01-21 00:30:32     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307432748451,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6260 2016-01-21 00:30:39     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307439883799,  type: 'pv',  method: 'GET',  url: '/getUser?uid=569fb41bdb1649641e8581a4',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:31:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::1860 2016-01-21 00:31:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307478934022,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:31:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453307478978654,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:41:49     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308109024555,  type: 'pv',  method: 'GET',  url: '/saveUser?account=&password=&email=',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:41:52     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308112912374,  type: 'pv',  method: 'GET',  url: '/saveUser?account=&password=&email=',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:42:47     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308167891852,  type: 'pv',  method: 'GET',  url: '/saveUser?account=mamaa&password=1985xiao&email=hahah%40gmail.com',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:49:53     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308593184107,  type: 'pv',  method: 'GET',  url: '/saveUser?account=hhhhhhh&password=hhhhhhh&email=hhhj%40hhhj',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:49:58     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308598068400,  type: 'pv',  method: 'GET',  url: '/saveUser?account=hhhhhhh&password=hhhhhhh&email=hhhj%40hhhj',  userInfo: undefined }
+NOTICE: pid::1860 2016-01-21 00:50:48     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308648469596,  type: 'pv',  method: 'GET',  url: '/saveUser?account=ffffff&password=fffffff&email=ffff%40gggg',  userInfo: undefined }
+NOTICE: pid::5220 2016-01-21 00:52:46     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::5220 2016-01-21 00:52:46     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308766874313,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::5220 2016-01-21 00:52:46     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308766933479,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6548 2016-01-21 00:52:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6548 2016-01-21 00:52:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308770241917,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6548 2016-01-21 00:52:50     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308770298986,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::6784 2016-01-21 00:53:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6784 2016-01-21 00:53:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308822397783,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::6784 2016-01-21 00:53:42     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308822482420,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7616 2016-01-21 00:53:46     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7616 2016-01-21 00:53:46     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308826174682,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7616 2016-01-21 00:53:46     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308826227555,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::5328 2016-01-21 00:54:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::5328 2016-01-21 00:54:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308854303574,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::5328 2016-01-21 00:54:14     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308854348390,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7140 2016-01-21 00:55:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::7140 2016-01-21 00:55:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308906667321,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::7140 2016-01-21 00:55:06     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308906725017,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::7140 2016-01-21 00:55:38     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308938133799,  type: 'pv',  method: 'GET',  url: '/login?name=xiaoguang&password=1985xiao',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 00:55:56     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:75:7) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::5428 2016-01-21 00:55:56     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308956901638,  type: 'pv',  method: 'GET',  url: '/',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 00:55:56     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308956953090,  type: 'pv',  method: 'GET',  url: '/js/page/task.js',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 00:55:59     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308959014539,  type: 'pv',  method: 'GET',  url: '/login?name=xiaoguang&password=1985xiao',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 00:56:18     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453308978576173,  type: 'pv',  method: 'GET',  url: '/login?account=xiaoguang&password=1985xiao',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 00:56:46     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453309006491841,  type: 'pv',  method: 'GET',  url: '/login?account=ffffff&password=fffffff',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 00:59:34     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453309174741116,  type: 'pv',  method: 'GET',  url: '/login?account=xiaoguang&password=xxxxxxx',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 01:00:01     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453309201745418,  type: 'pv',  method: 'GET',  url: '/saveUser?account=xiaoguang&password=zzzzzzz&email=xiaog%40qq.com',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 01:00:08     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453309208714690,  type: 'pv',  method: 'GET',  url: '/login?account=xiaoguang&password=zzzzzzz',  userInfo: undefined }
+NOTICE: pid::5428 2016-01-21 01:00:55     at Object.<anonymous> (D:\code\sousou-node\app\bootSrtap.js:56:11) { logid: 1453309255607721,  type: 'pv',  method: 'GET',  url: '/login?account=xiaoguang&password=zzzzzzz',  userInfo: undefined }

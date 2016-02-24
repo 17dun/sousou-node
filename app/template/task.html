@@ -1,0 +1,121 @@
+<div class="content-wrap">
+    <form id="taskQuery" class="form-inline">
+        <div class="form-group">
+            <label for="taskName2">任务名</label>
+            <input type="text" class="form-control" id="taskName2" name="taskName2">
+        </div>
+        <div class="form-group">
+            <label for="createrName">创建人</label>
+           <input type="text" class="form-control" id="createrName" name="createrName">
+        </div>
+        <div class="form-group">
+            <label for="taskState">任务状态</label>
+            <select class="form-control" id="taskState" name="taskState">
+              <option value="">不限</option>
+              <option value="0">待触发</option>
+              <option value="1">队列中</option>
+              <option value="2">执行中</option>
+            </select>
+        </div>
+        
+        <button type="button" class="btn btn-primary query-btn">查询</button>
+        <button type="button" class="btn btn-primary add-btn">新建</button>
+    </form>
+     <table class="table table-bordered table-striped task-table" id="taskList">
+        <thead>
+            <tr>
+                <th width="25%">任务名</th>
+                <th>创建人</th>
+                <th>任务类型</th>
+                <th>运行状态</th>
+                <th>找到问题</th>
+                <th>最后运行时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="taskListBody">
+        </tbody>
+    </table>
+
+    <div id="editBox" style="display:none;">
+
+    </div>
+
+    <div id="delBox" style="display:none;">
+        删除无法恢复，确定要删除？
+    </div>
+
+    <p class="alert alert-success" id="bgMsg" style="opacity:0">操作成功!</p>
+
+    <script id="editFormTemp" type="text/x-jquery-tmpl">
+        <form id="editform" role="form">
+            {{if _id}}
+            <input type="hidden" name="_id" value=${_id}>
+            {{/if}}
+            <div class="form-group">
+              <label for="taskName">任务名</label>
+              <input type="text" class="form-control" id="taskName" name="taskName" value="${taskName}">
+            </div>
+            <div class="form-group">
+                <label for="taskType">任务类型</label>
+                <select class="form-control" id="taskType" name="taskType">
+                  <option value="0" {{if taskType}}{{if taskType==0}}selected="selected"{{/if}}{{/if}}>手动触发</option>
+                  <option value="1" {{if taskType}}{{if taskType==1}}selected="selected"{{/if}}{{/if}}>自动触发</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="block">执行环境</label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="1" name="taskEval" {{if taskEval}}{{if taskEval.indexOf('1')!=-1}} checked="checked"{{/if}}{{/if}}>iphone 5
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="2" name="taskEval" {{if taskEval}}{{if taskEval.indexOf('2')!=-1}} checked="checked"{{/if}}{{/if}}>iphone 6
+                </label>
+                 <label class="checkbox-inline">
+                  <input type="checkbox" value="3" name="taskEval" {{if taskEval}}{{if taskEval.indexOf('3')!=-1}} checked="checked"{{/if}}{{/if}}>iphone plus
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="4" name="taskEval" {{if taskEval}}{{if taskEval.indexOf('4')!=-1}} checked="checked"{{/if}}{{/if}}>三星 note3
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="5" name="taskEval" {{if taskEval}}{{if taskEval.indexOf('5')!=-1}} checked="checked"{{/if}}{{/if}}>三星 note4
+                </label>
+            </div>
+            <div class="form-group">
+             <label for="queryDict">query 词典</label>
+             <input type="file" id="queryDict" name="queryDict">
+             <p class="help-block">您可以上传query词典，或者选择已有的词典</p>
+            </div>
+            <div class="form-group">
+              <label for="urlOption">可选url参数</label>
+              <input type="text" class="form-control" id="urlOption" name="urlOption" value="${urlOption}">
+            </div>
+            <div class="form-group">
+              <label for="password">执行脚本(<a>帮助</a>)</label>
+              <textarea class="form-control" name="runScript">${runScript}</textarea>
+            </div>
+            <div class="form-group">
+              <label for="password">报表处理(<a>帮助</a>)</label>
+              <textarea class="form-control" name="dashBoardScript">${dashBoardScript}</textarea>
+            </div>
+        </form>
+    </script>
+
+    <script id="taskListTemp" type="text/x-jquery-tmpl">
+            <tr data-taskId="${_id}">
+                <td>${taskName}</td>
+                <td>${createrName}</td>
+                <td>{{if taskType==0}}手动触发{{/if}}{{if taskType==1}}自动触发{{/if}}</td>
+                <td>{{if taskState==0}}待触发{{/if}}{{if taskState==1}}队列中{{/if}}{{if taskState==2}}执行中{{/if}}</td>
+                <td><a href="/bug" target="_blank">${lastRunTime}</a>/${lastRunTime}</td>
+                <td>${lastRunTime}</td>
+                <td>
+                    <a href="#" type="button" class="run-btn">运行</a> |
+                    <a href="#" href="/report?taskId=${_id}" target="_blank" class="info-btn">结果</a> |
+                    <a href="#" type="button" class="edit-btn">编辑</a> |
+                    <a href="#" type="button" class="del-btn">删除</a>
+                </td>
+            </tr>
+    </script>
+
+</div>
