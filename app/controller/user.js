@@ -4,7 +4,6 @@
  * @author xiaoguang01
  * @date 2015/9/25
  */
-var taskModel = require('../model/task.js');
 var userModel = require('../model/user.js');
 module.exports = {
 	//展现页面
@@ -24,8 +23,11 @@ module.exports = {
 
     //获取用户信息
     get: function *(){
+        console.log(11111);
         var uid = this.query.uid;
+        console.log(uid)
         var rs = yield userModel.getUser(uid);
+
         yield this.api(rs);
     },
 
