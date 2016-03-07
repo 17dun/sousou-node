@@ -1,8 +1,8 @@
 /**
- * @file index.js
- * @desc 控制器
+ * @file user.js
+ * @desc 用户控制器
  * @author xiaoguang01
- * @date 2015/9/25
+ * @date 2016/3/7
  */
 var userModel = require('../model/user.js');
 module.exports = {
@@ -15,6 +15,7 @@ module.exports = {
         });
     },
 
+    //登陆
     login: function *(){
         var data = this.query;
         var rs = yield userModel.login(data);
@@ -23,7 +24,6 @@ module.exports = {
 
     //获取用户信息
     get: function *(){
-        console.log(11111);
         var uid = this.query.uid;
         console.log(uid)
         var rs = yield userModel.getUser(uid);

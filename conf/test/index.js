@@ -56,5 +56,7 @@ module.exports = {
 	redis: {
 		host: '182.254.209.32',
 		port: 6379
-	}
+	},
+
+    db: 'mongodb://localhost:27017/sousou'
 }

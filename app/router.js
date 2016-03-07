@@ -9,7 +9,7 @@ var ctrs = [];
 function getC(app) {
     return new Promise(function (resovel, reject) {
         try {
-            ctrs = require('../libs/ctrs.js').getCtrs();
+            ctrs = require('./libs/ctrs.js').getCtrs();
             resovel(ctrs);
         }
         catch (e) {

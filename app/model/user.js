@@ -2,10 +2,10 @@
  * @file user.js
  * @desc 用户模型
  * @author xiaoguang01
- * @date 2015/9/27
+ * @date 2016/3/7
  */
 var MongoClient = require('mongodb').MongoClient;
-var DB_CONN_STR = 'mongodb://localhost:27017/sousou';
+var DB_CONN_STR = require('../../conf').db;
 var ObjectId =  require('mongodb').ObjectID;
 module.exports = {
         //插入数据
