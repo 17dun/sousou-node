@@ -34,6 +34,11 @@ page.open(url, function(status){
                 console.log(JSON.stringify(evalResult));
             }
             phantom.exit();
-        },3000);
+        },1000);
     }
+	
+	setTimeout(function(){
+		phantom.exit();
+	},3000)
+	
 })
