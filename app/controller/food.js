@@ -6,15 +6,30 @@
  */
 var foodModel = require('../model/food.js');
 module.exports = {
+
+    //显示页面
+    show function *(){
+        var rs = yield foodModel.getList(data);
+        yield this.api(rs);
+        
+    },
+
     //获取列表
-    getList: function *(){
+    list: function *(){
         var rs = yield foodModel.getList(data);
         yield this.api(rs);
         
     },
 
     //获取详细信息
-    getFood: function *(){
+    detail: function *(){
+        var id = this.query.fid;
+        var rs = yield foodModel.getFood(id);
+        yield this.api(rs);
+    },
+
+    //添加食物
+    add: function *(){
         var id = this.query.fid;
         var rs = yield foodModel.getFood(id);
         yield this.api(rs);

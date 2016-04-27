@@ -31,13 +31,12 @@ function run(option){
     function startNew(){
         if(urls.length){
             var url = urls.shift();
-            console.log(url);
             var worker = spawn('phantomjs', [__dirname+'/task.js', url]);
             worker.stdout.on('data', function (data) {
                 parserPage(data.toString());
             });
             worker.on('close', function (code) {
-                startNew();
+                setTimeout(function(){startNew();},1000)
             });
         }else{
             console.log('执行完毕');
@@ -67,13 +66,13 @@ function getDetail(){
 }
 
 //单条数据入库
-function addItem(){
-    // MongoClient.connect(url, function(err, db) {
-    //     var collection = db.collection('food');
-    //     collection.insert(obj,function(err,rt){
-    //         console.log('入库成功');
-    //     })
-    // });
+function addItem(obj){
+    MongoClient.connect(mongoStr, function(err, db) {
+        var collection = db.collection('food');
+        collection.insert(obj,function(err,rt){
+            console.log('入库成功');
+        })
+    });
 }
 
 //单条数据详情入库,可以以对象方式插入到同一个文档中

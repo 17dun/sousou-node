@@ -29,6 +29,20 @@ function set(app) {
 
 function setMap(ctrs) {
     router.get('/', ctrs.user.show);
+
+
+    router.get('food', ctrs.food.show);
+    router.get('foodList', ctrs.food.list);
+    router.get('foodAdd', ctrs.food.add);
+    router.get('foodDetail', ctrs.food.detail);
+
+    router.get('sport', ctrs.sport.show);
+    router.get('sportList', ctrs.sport.list);
+    router.get('sportAdd', ctrs.sport.add);
+
+
+
+
     //获取用户星系
     router.get('/getUser', ctrs.user.get);
 
