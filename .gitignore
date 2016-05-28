@@ -2,3 +2,7 @@ node_modules/
 log/
 pid
 crawl/images/
+.ide/
+.idea/jsLibraryMappings.xml
+.idea/libraries/
+.idea/vcs.xml
