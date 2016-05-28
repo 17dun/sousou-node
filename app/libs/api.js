@@ -5,8 +5,8 @@
  * @date 2015/10/09
  */
 
-function api(app, settings) {
-    app.context.api = function *(obj) {
+function api(app) {
+    app.context.api = function *(obj){
         this.type = 'json';
         this.body = JSON.stringify(obj);
     };
