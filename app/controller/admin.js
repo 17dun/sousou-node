@@ -1,15 +1,18 @@
 /**
- * @file user.js
+ * @file admin.js
  * @desc 用户控制器
  * @author xiaoguang01
  * @date 2016/3/7
  */
-var userModel = require('../model/user.js');
+var userModel = require('../model/admin.js');
 module.exports = {
 	//展现页面
     show: function *(){
         var self = this;
-        yield self.render('user');
+        yield self.render('task', {
+            userInfo : self.userInfo||null,
+            taskList : null
+        });
     },
 
     //登陆

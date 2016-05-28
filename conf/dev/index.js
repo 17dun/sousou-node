@@ -29,6 +29,7 @@ module.exports = {
     // 模板引擎相关配置
     view: {
         root: path.join(__dirname, '../app/template'),
+        pagedir: 'page',
         layout: 'layout',
         viewExt: 'html',
         cache: false,

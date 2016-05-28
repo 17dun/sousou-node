@@ -1,22 +1,36 @@
 /**
- * @file record.js
- * @desc 历程控制器
+ * @file food.js
+ * @desc 食物控制器
  * @author xiaoguang01
- * @date 2016/3/7
+ * @date 2017/3/7
  */
-var recordModel = require('../model/record.js');
+var foodModel = require('../model/record.js');
 module.exports = {
-    //获取某一个用户的记录
-    getList: function *(){
-        var uid = this.query.uid;
-        var rs = yield recordModel.getList(uid);
+
+    //显示页面
+    show: function *(){
+        yield this.render('record');
+        
+    },
+
+    //获取列表
+    list: function *(){
+        var rs = yield foodModel.getList(data);
+        yield this.api(rs);
+        
+    },
+
+    //获取详细信息
+    detail: function *(){
+        var id = this.query.fid;
+        var rs = yield foodModel.getFood(id);
         yield this.api(rs);
     },
-    //某一个用户添加记录
-    add: function() *(){
-        var data = this.query;
-        var rs = yield recordModel.add(data);
-        yield this.api(rs);
 
+    //添加食物
+    add: function *(){
+        var id = this.query.fid;
+        var rs = yield foodModel.getFood(id);
+        yield this.api(rs);
     }
 };

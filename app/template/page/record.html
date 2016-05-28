@@ -1,0 +1,35 @@
+<div class="content-wrap">
+    <form id="taskQuery" class="form-inline">
+        <div class="form-group">
+            <label for="taskName2">食物名</label>
+            <input type="text" class="form-control" id="taskName2" name="taskName2">
+        </div>
+        <div class="form-group">
+            <label for="createrName">热量</label>
+           <input type="text" class="form-control" id="createrName" name="createrName">
+        </div>
+        <button type="button" class="btn btn-primary query-btn">查询</button>
+        <button type="button" class="btn btn-primary add-btn">新建</button>
+    </form>
+     <table class="table table-bordered table-striped task-table" id="taskList">
+        <thead>
+            <tr>
+                <th width="30%">食物名</th>
+                <th>热量</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="taskListBody">
+        </tbody>
+    </table>
+
+    <div id="editBox" style="display:none;">
+
+    </div>
+
+    <div id="delBox" style="display:none;">
+        删除无法恢复，确定要删除？
+    </div>
+
+    <p class="alert alert-success" id="bgMsg" style="opacity:0">操作成功!</p>
+</div>

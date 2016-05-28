@@ -6,6 +6,13 @@
  */
 var sportModel = require('../model/sport.js');
 module.exports = {
+
+     //显示页面
+    show: function *(){
+        yield this.render('sport');
+        
+    },
+
 	//获取列表
     getList: function *(){
         var rs = yield sportModel.getList(data);

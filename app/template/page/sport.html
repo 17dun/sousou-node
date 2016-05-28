@@ -1,0 +1,64 @@
+<div class="content-wrap">
+<form id="query" class="form-inline">
+        <button type="button" class="btn btn-primary add-btn">增加抓取器</button>
+    </form>
+     <table class="table table-bordered table-striped task-table" id="list">
+        <thead>
+            <tr>
+                <th width="25%">IP</th>
+                <th>端口号</th>
+                <th>机器类型</th>
+                <th>机器状态</th>
+                <th>任务列表数</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="listBody">
+        </tbody>
+    </table>
+
+    <div id="editBox" style="display:none;">
+    </div>
+
+    <div id="delBox" style="display:none;">
+        删除无法恢复，确定要删除？
+    </div>
+
+    <p class="alert alert-success" id="bgMsg" style="opacity:0">操作成功!</p>
+
+    <script id="listTemp" type="text/x-jquery-tmpl">
+        <tr data-machineid="${_id}">
+            <td>${ip}</td>
+            <td>${port}</td>
+            <td>{{if type}}{{if type==0}}一般抓取器{{else}}性能抓取器{{/if}}{{/if}}</td>
+            <td>{{if status}}{{if status==0}}空闲{{else}}繁忙{{/if}}{{/if}}</td>
+            <td>${taskNum}</td>
+            <td>
+                <a href="#" type="button" class="edit-btn">修改</a> |
+                <a href="#" type="button" class="del-btn">删除</a>
+            </td>
+        </tr>
+    </script>
+
+    <script id="editFormTemp" type="text/x-jquery-tmpl">
+        <form id="editform" role="form">
+            <div class="form-group">
+              <label for="ip">机器名</label>
+              <input type="text" class="form-control" id="ip" name="ip" value="${ip}">
+            </div>
+            <div class="form-group">
+              <label for="port">端口号</label>
+              <input type="text" class="form-control" id="port" name="port" value="${port}">
+            </div>
+             <div class="form-group">
+              <label for="type">类型</label>
+                <select class="form-control" id="type" name="type">
+                  <option value="0" {{if type}}{{if type=="0"}}selected{{/if}}{{/if}}>一般抓取器</option>
+                  <option value="1" {{if type}}{{if type=="1"}}selected{{/if}}{{/if}}>性能抓取器</option>
+                </select>
+            </div>
+            <input type="hidden" value="${_id}" name="_id">
+        </form>
+    </script>
+
+</div>

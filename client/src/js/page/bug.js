@@ -7,11 +7,18 @@
 zeus.page({
     initDatas: function () {
         self.rsList = [];
+        self.allCount = null;
+        self.taskId = '';
+        self.keys = [];
+        self.displays = [];
     },
     // 初始化部件
     initParts: function () {
-        self.getRsList();
-        self.getStatList();
+        self.parts = {
+        };
+        var taskId = $('#taskIdInput').val();
+        self.getRsList(taskId);
+
     },
     // 事件绑定
     bindEvent: function () {
@@ -19,14 +26,19 @@ zeus.page({
     },
 
 
-    getRsList: function(){
+    getRsList: function(taskId){
         $.ajax({
-            url: '/allBugList',
+            url: '/bugList',
             type: 'GET',
+            data: {
+                taskId: taskId
+            },
             dataType: 'json',
             success: function(rt){
                 self.rsList = rt.data;
-                self.renderChartBox();
+                self.allCount = rt.allCount;
+                self.taskId = rt.taskId;
+                self.renderRsList();
             },
             error: function(rt){
                 //alert('失败');
@@ -34,56 +46,27 @@ zeus.page({
         });
     },
 
-    //获取统计数据
-    getStatList: function(){
-        $.ajax({
-            url: '/getAllStat',
-            type: 'GET',
-            dataType: 'json',
-            success: function(rt){
-                self.statList = rt;
-                console.log(self.statList);
-                self.statList.avi = (self.statList.allNum*100/self.statList.allQueryNum).toFixed(2)+'%';
-                if(isNaN(self.statList.avi)){
-                    self.statList.avi = '-';
-                }
-                self.renderStatBox();
-            },
-            error: function(rt){
-                //alert('失败');
-            }
-        })
-
-    },
-
-    renderStatBox: function(){
-        $('#statBody').html($('#statTemp').tmpl(self.statList));
-
-    },
-
-    renderChartBox: function(){
-        $('#bugListTemp').tmpl(self.rsList).appendTo('#bugList');
-        $('.chart-box').css({width:self.getItemWidth()});
-        self.renderCharts();
-    },
-
-    getItemWidth: function(){
-        return $('.chart-box-wrap').width();
+    renderLastBugs: function(){
+        var obj = {
+            keys: self.keys,
+            datas: self.allCount,
+            displays: self.displays,
+            taskId: self.taskId
+        };
+        $('#lastBugTemp').tmpl(obj).appendTo('#lastBugBox');
+        
     },
 
     renderCharts: function(){
         for(var i = 0; i < self.rsList.length; i++){
             var rsItem = self.rsList[i];
+            self.keys.push(rsItem.key);
+            self.displays.push(rsItem.display);
             var lineChart = echarts.init($('.chart-box')[i]);
             lineChart.setOption({
                 title : {
-                    show:false,
                     text: rsItem.display + '监控趋势',
                     subtext: '单位：总个数'
-                },
-                grid:{
-                    top:10,
-                    bottom:25
                 },
                 legend: {
                     data:['体重','净消耗']
@@ -141,6 +124,12 @@ zeus.page({
             ]
             })
         }
+    },
+
+    renderRsList: function(){
+        $('#bugListTemp').tmpl(self.rsList).appendTo('#bugBox');
+        self.renderCharts();
+        self.renderLastBugs();
     },
 
     //飘红渐变提示

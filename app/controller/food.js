@@ -8,9 +8,9 @@ var foodModel = require('../model/food.js');
 module.exports = {
 
     //显示页面
-    show function *(){
-        var rs = yield foodModel.getList(data);
-        yield this.api(rs);
+    show: function *(){
+        console.log(1111111);
+        yield this.render('food');
         
     },
 

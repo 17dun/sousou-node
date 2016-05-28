@@ -6,11 +6,10 @@
  */
 var config = require('../conf');
 var koa = require('koa');
-var view = require('zeus-template');
+var view = require('./libs/template');
 var router = require('./router.js');
 var route = require('koa-router')();
 var app = koa();
-var scd = koa();
 var fs = require('fs');
 var runEnv = config.runEnv;
 var bodyParser = require('koa-bodyparser');
@@ -43,7 +42,7 @@ if (runEnv === 'dev') {
     app.use(function *(next) {
         yield next;
         if(this.type === 'text/html') {
-            this.body += yield this.toHtml('reload');
+            this.body += yield this.toHtml('blocks/reload');
         }
     });
 }
@@ -59,7 +58,6 @@ app.use(function *(next) {
 
 // 设置路由
 router(app);
-scd.use(route.routes());
 route.get('/',function* (){console.log(1111)});
 
 app.use(function *error(next) {
@@ -70,7 +68,6 @@ app.use(function *error(next) {
     }
 });
 
-scd.listen(8001);
 app.listen(8000);
 tclog.notice('UI Server已经启动：http://127.0.0.1:8000');
 // 启动后通过IO通知watch

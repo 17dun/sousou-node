@@ -1,3 +1,72 @@
 @import (css) "../bower_components/bootstrap/dist/css/bootstrap.css";
-@import (css) "../bower_components/jquery-ui/themes/base/jquery-ui.css";
-@import (less) "custom/p2p.less";
+@import (css) "../bower_components/jquery-ui/themes/base/jquery-ui.min.css";
+@import (css) "./common/jquery-ui-1.10.3.custom.less";
+@import (css) "./common/jquery.auto-complete.css";
+body{background-color: #f1f1f1}
+#header{background:#337ab7;color:#fff;height:50px;line-height:50px;text-align:left;padding-left:40px;font-size:21px;}
+.content-wrap{
+    background: #fff;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 20px;
+    padding-top: 30px;
+}
+.breadcrumb{width:980px;margin:0 auto;}
+.task-table{margin-top:30px;}
+.form-group{margin-right:20px}
+.ui-widget-header{    
+    border: 1px solid #337ab7;
+    background: #337ab7;
+    color: #fff;
+    font-weight: bold;
+}
+.task-table tbody tr td{
+    vertical-align: middle;
+}
+.task-table .btn{margin:auto 5px;}
+
+.ui-dialog-titlebar .ui-button-text{display:none;}
+
+#header{padding-left:0;}
+#header p{max-width:1200px;margin:0 auto;}
+#header a{color:#fff;}
+#header .navbar-header a{font-size:20px;font-weight:bold;}
+#header .navbar-nav{font-size:14px;}
+#header .navbar-nav a:hover{background-color:#337ab7;color:#fff}
+#header .navbar-nav .active{font-size:16px;font-weight:bold;}
+.block{display:block}
+#bgMsg{position:fixed;left:50%;top:50%;padding: 15px;margin-left:-45px;margin-top:-45px;border-radius:2px;}
+.CodeMirror{height:100px;border:1px solid #ccc}
+#header .header-inner{width:1200px;margin:0 auto;}
+#header .navbar-brand{padding-left:0px;}
+#taskQuery label{margin-right:10px;}
+#taskQuery button{margin-right:10px;}
+
+.task-status{padding:5px;}
+
+.status-free{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.status-que{
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.status-run{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.panel table{
+    margin:0;
+}
+
+#editform textarea{
+    height:200px;
+}

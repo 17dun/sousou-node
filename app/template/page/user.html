@@ -1,0 +1,47 @@
+<div class="content-wrap">
+<form id="query" class="form-inline">
+        <button type="button" class="btn btn-primary add-btn">添加用户</button>
+    </form>
+     <table class="table table-bordered table-striped task-table" id="list">
+        <thead>
+            <tr>
+                <th width="25%">ID</th>
+                <th>用户名</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="listBody">
+        </tbody>
+    </table>
+
+    <div id="editBox" style="display:none;">
+    </div>
+
+    <div id="delBox" style="display:none;">
+        删除无法恢复，确定要删除？
+    </div>
+
+    <p class="alert alert-success" id="bgMsg" style="opacity:0">操作成功!</p>
+
+    <script id="listTemp" type="text/x-jquery-tmpl">
+        <tr data-userid="${_id}">
+            <td>${_id}</td>
+            <td>${username}</td>
+            <td>
+                <a href="#" type="button" class="edit-btn">修改</a> |
+                <a href="#" type="button" class="del-btn">删除</a>
+            </td>
+        </tr>
+    </script>
+
+    <script id="editFormTemp" type="text/x-jquery-tmpl">
+        <form id="editform" role="form">
+            <div class="form-group">
+              <label for="username">用户名</label>
+              <input type="text" class="form-control" id="username" name="username" value="${username}">
+            </div>
+            <input type="hidden" value="${_id}" name="_id">
+        </form>
+    </script>
+
+</div>

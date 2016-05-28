@@ -5,7 +5,7 @@
 <html>
   <head>
         <meta charset="UTF-8">
-        <title>前端自动化测试平台</title>
+        <title>OWL-前端自动化测试与页面监控平台</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <% if(useLess) {%>
         <link rel="stylesheet/less" href="/less/common.less">
@@ -14,8 +14,6 @@
         <link rel="stylesheet" href="/css/common.css">
         <link rel="stylesheet" href="/css/page/<%=pageName%>.css">
         <% } %>
-        <script type="text/javascript" src="/js/common.js"></script>
-        <script type="text/javascript" src="/js/page/<%=pageName%>.js"></script>
   </head>
   <body>
     <div class="tc-container">
@@ -26,5 +24,7 @@
         <% include blocks/footer.html %>
     </div>
   </body>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/page/<%=pageName%>.js"></script>
 </html>
 <% } %>
