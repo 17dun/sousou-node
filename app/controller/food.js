@@ -9,14 +9,14 @@ module.exports = {
 
     //显示页面
     show: function *(){
-        console.log(1111111);
         yield this.render('food');
         
     },
 
     //获取列表
     list: function *(){
-        var rs = yield foodModel.getList(data);
+        var data = this.query;
+        var rs = yield foodModel.list(data);
         yield this.api(rs);
         
     },
@@ -24,14 +24,20 @@ module.exports = {
     //获取详细信息
     detail: function *(){
         var id = this.query.fid;
-        var rs = yield foodModel.getFood(id);
+        var rs = yield foodModel.detail(id);
         yield this.api(rs);
     },
 
     //添加食物
-    add: function *(){
-        var id = this.query.fid;
-        var rs = yield foodModel.getFood(id);
+    save: function *(){
+        var data = this.query;
+        var rs = yield foodModel.save(data);
+        yield this.api(rs);
+    },
+    //添加食物
+    del: function *(){
+        var data = this.query;
+        var rs = yield foodModel.del(data);
         yield this.api(rs);
     }
 };

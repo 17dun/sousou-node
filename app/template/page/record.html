@@ -1,25 +1,29 @@
 <div class="content-wrap">
-    <form id="taskQuery" class="form-inline">
+    <form id="queryBox" class="form-inline">
         <div class="form-group">
-            <label for="taskName2">食物名</label>
-            <input type="text" class="form-control" id="taskName2" name="taskName2">
+            <label for="sportNameQ">创建人</label>
+            <input type="text" class="form-control" id="recordUserQ" name="recordUserQ">
         </div>
         <div class="form-group">
-            <label for="createrName">热量</label>
-           <input type="text" class="form-control" id="createrName" name="createrName">
+            <label for="sportHotQ">记录类型</label>
+           <input type="text" class="form-control" id="recordTypeQ" name="recordTypeQ">
+        </div>
+        <div class="form-group">
+            <label for="sportHotQ">内容</label>
+            <input type="text" class="form-control" id="recordContentQ" name="recordContentQ">
         </div>
         <button type="button" class="btn btn-primary query-btn">查询</button>
         <button type="button" class="btn btn-primary add-btn">新建</button>
     </form>
-     <table class="table table-bordered table-striped task-table" id="taskList">
+     <table class="table table-bordered table-striped task-table" id="listBox">
         <thead>
             <tr>
-                <th width="30%">食物名</th>
-                <th>热量</th>
-                <th>操作</th>
+                <th width="30%">类型</th>
+                <th>内容</th>
+                <th>创建人</th>
             </tr>
         </thead>
-        <tbody id="taskListBody">
+        <tbody id="listBody">
         </tbody>
     </table>
 
@@ -33,3 +37,37 @@
 
     <p class="alert alert-success" id="bgMsg" style="opacity:0">操作成功!</p>
 </div>
+
+<script id="editFormTemp" type="text/x-jquery-tmpl">
+    <div class="container-fluid">
+    <div class="row">
+    <form id="editform" role="form">
+       {{if _id}}
+            <input type="hidden" name="_id" value=${_id} />
+       {{/if}}
+      <div class="col-xs-12">
+        <div class="form-group">
+        <label for="foodName">运动名</label>
+              <input type="text" class="form-control" id="sportName" name="sportName" value="${sportName}">
+        </div>
+        <div class="form-group">
+        <label for="foodHot">热量</label>
+              <input type="text" class="form-control" id="sportHot" name="sportHot" value="${sportHot}">
+        </div>
+      </div>
+    </form>
+    </div>
+    </div>
+</script>
+
+<script id="listTemp" type="text/x-jquery-tmpl">
+    <tr data-itemid="${_id}" data-itemname="${sportName}">
+        <td width="15%">${sportName}</td>
+        <td >${sportHot}</td>
+        <td>
+            <a href="javascript:;" type="button" class="edit-btn">编辑</a>
+            <a href="javascript:;" type="button" class="del-btn">删除</a>
+        </td>
+    </tr>
+</script>
+

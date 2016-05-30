@@ -32,13 +32,14 @@ function setMap(ctrs) {
 
 
     router.get('/food', ctrs.food.show);
-    // router.get('/foodList', ctrs.food.list);
-    // router.get('/foodAdd', ctrs.food.add);
-    // router.get('/foodDetail', ctrs.food.detail);
+    router.get('/food/list', ctrs.food.list);
+    router.get('/food/save', ctrs.food.save);
+    router.get('/food/del', ctrs.food.del)
 
     router.get('/sport', ctrs.sport.show);
-    // router.get('/sportList', ctrs.sport.list);
-    // router.get('/sportAdd', ctrs.sport.add);
+    router.get('/sport/list', ctrs.sport.list);
+    router.get('/sport/save', ctrs.sport.save);
+    router.get('/sport/del', ctrs.sport.del);
 
 
 

@@ -1,17 +1,17 @@
 <div class="content-wrap">
-    <form id="taskQuery" class="form-inline">
+    <form id="queryBox" class="form-inline">
         <div class="form-group">
-            <label for="taskName2">食物名</label>
-            <input type="text" class="form-control" id="taskName2" name="taskName2">
+            <label for="foodNameQ">食物名</label>
+            <input type="text" class="form-control" id="foodNameQ" name="foodNameQ">
         </div>
         <div class="form-group">
-            <label for="createrName">热量</label>
-           <input type="text" class="form-control" id="createrName" name="createrName">
+            <label for="foodHotQ">热量</label>
+           <input type="text" class="form-control" id="foodHotQ" name="foodHotQ">
         </div>
         <button type="button" class="btn btn-primary query-btn">查询</button>
         <button type="button" class="btn btn-primary add-btn">新建</button>
     </form>
-     <table class="table table-bordered table-striped task-table" id="taskList">
+     <table class="table table-bordered table-striped task-table" id="listBox">
         <thead>
             <tr>
                 <th width="30%">食物名</th>
@@ -19,7 +19,7 @@
                 <th>操作</th>
             </tr>
         </thead>
-        <tbody id="taskListBody">
+        <tbody id="listBody">
         </tbody>
     </table>
 
@@ -33,3 +33,37 @@
 
     <p class="alert alert-success" id="bgMsg" style="opacity:0">操作成功!</p>
 </div>
+
+<script id="editFormTemp" type="text/x-jquery-tmpl">
+    <div class="container-fluid">
+    <div class="row">
+    <form id="editform" role="form">
+       {{if _id}}
+            <input type="hidden" name="_id" value=${_id} />
+       {{/if}}
+      <div class="col-xs-12">
+        <div class="form-group">
+        <label for="foodName">食物名</label>
+              <input type="text" class="form-control" id="foodName" name="foodName" value="${foodName}">
+        </div>
+        <div class="form-group">
+        <label for="foodHot">热量</label>
+              <input type="text" class="form-control" id="foodHot" name="foodHot" value="${foodHot}">
+        </div>
+      </div>
+    </form>
+    </div>
+    </div>
+</script>
+
+<script id="listTemp" type="text/x-jquery-tmpl">
+    <tr data-itemid="${_id}" data-itemname="${foodName}">
+        <td width="15%">${foodName}</td>
+        <td >${foodHot}</td>
+        <td>
+            <a href="javascript:;" type="button" class="edit-btn">编辑</a>
+            <a href="javascript:;" type="button" class="del-btn">删除</a>
+        </td>
+    </tr>
+</script>
+

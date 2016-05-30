@@ -18,7 +18,7 @@ var gulpSequence = require('gulp-sequence')
 
 // 监听静态文件和模板以及pid修改，并刷新页面
 gulp.task('watch', function () {
-    livereload.listen();
+    livereload.listen(8002);
     gulp.watch([
         './pid',
         'app/template/**/*.*',

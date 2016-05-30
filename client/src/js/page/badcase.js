@@ -20,58 +20,60 @@ zeus.page({
     },
     // 事件绑定
     bindEvent: function () {
-
         var $queryBtn = self.parts.$form.find('.query-btn');
-        $queryBtn.on('click', function(){
+        $queryBtn.on('click', function () {
             self.getRsList();
-        })
+        });
     },
 
-
-    getRsList: function(){
+    getRsList: function () {
         var data = self.parts.$form.serialize();
         $.ajax({
             url: '/badcaseList',
             type: 'GET',
             dataType: 'json',
             data: data,
-            success: function(rt){
+            success: function (rt) {
                 self.rsList = rt.data;
                 self.keys = rt.keys;
                 self.renderRsList();
             },
-            error: function(rt){
-                //alert('失败');
+            error: function (rt) {
+                // alert('失败');
             }
         });
     },
 
-    renderRsList: function(){
-        $("#taskListBody").empty();
+    renderRsList: function () {
+        $('#taskListBody').empty();
         var obj = {
             rsList: self.rsList
-        }
+        };
 
         $('#taskListTemp').tmpl(obj).appendTo('#taskListBody');
     },
-
-    //飘红渐变提示
-    msg: function(type,msg){
-        var $msgBox = $('#bgMsg')
-        if(type){
+    // 飘红渐变提示
+    msg: function (type, msg) {
+        var $msgBox = $('#bgMsg');
+        if (type) {
             $msgBox.addClass('alert-success');
             $msgBox.removeClass('alert-danger');
-            $msgBox.html('操作成功')
-        }else{
+            $msgBox.html('操作成功');
+        }
+        else {
             $msgBox.addClass('alert-danger');
             $msgBox.removeClass('alert-success');
-            $msgBox.html('操作失败')
+            $msgBox.html('操作失败');
         }
-        if(msg){
+        if (msg) {
             $msgBox.html(msg);
         }
-        $msgBox.animate({opacity:1});
-        $msgBox.animate({opacity:0},800)
+
+        $msgBox.animate({
+            opacity: 1
+        });
+        $msgBox.animate({
+            opacity: 0
+        }, 800);
     }
-    
 });
