@@ -23,10 +23,10 @@ page.open(url, function(status){
                         var name = $food.find('.text-box a').html();
                         var hot = $food.find('.text-box p').html();
                         rt.push({
-                            name:name,
+                            foodName:name,
                             link:link,
                             img:img,
-                            hot:hot
+                            foodHot:hot
                         })
                     }
                     return rt;

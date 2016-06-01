@@ -1,7 +1,7 @@
 node_modules/
 log/
 pid
-crawl/images/
+client/src/images/
 .ide/
 .idea/jsLibraryMappings.xml
 .idea/libraries/
