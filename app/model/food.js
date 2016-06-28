@@ -8,11 +8,19 @@ var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = require('../../conf').db;
 var ObjectId =  require('mongodb').ObjectID;
 module.exports = {
-    list: function(){
+    list: function(data){
+
+        var pageSize = data.pageSize*1 || 10;
+        if(data.pageNum){
+            from = (data.pageNum - 1) * data.pageSize;
+        }else{
+            from = 0;
+        }
+
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('food');
-                collection.find().toArray(function(err, rt){
+                collection.find().skip(from).limit(pageSize).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
