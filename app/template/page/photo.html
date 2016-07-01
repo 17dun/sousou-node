@@ -1,0 +1,71 @@
+<div class="content-wrap">
+    <form id="queryBox" class="form-inline">
+        <div class="form-group">
+            <label for="userQ">上传人</label>
+            <input type="text" class="form-control" id="userQ" name="userQ">
+        </div>
+        <button type="button" class="btn btn-primary query-btn">查询</button>
+        <button type="button" class="btn btn-primary add-btn">新建</button>
+    </form>
+     <table class="table table-bordered table-striped task-table" id="listBox">
+        <thead>
+            <tr>
+                <th width="10%">照片</th>
+                <th width="30%">上传人</th>
+                <th>上传日期</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="listBody">
+        </tbody>
+    </table>
+
+    <div id="editBox" style="display:none;">
+
+    </div>
+
+    <div id="delBox" style="display:none;">
+        删除无法恢复，确定要删除？
+    </div>
+
+    <p class="alert alert-success" id="bgMsg" style="opacity:0">操作成功!</p>
+</div>
+
+<script id="editFormTemp" type="text/x-jquery-tmpl">
+    <div class="container-fluid">
+    <div class="row">
+    <form id="editform" role="form">
+       {{if _id}}
+            <input type="hidden" name="_id" value=${_id} />
+       {{/if}}
+      <div class="col-xs-12">
+        <div class="form-group">
+        <label for="file">选择图片</label>
+            <input type="button" id="dictFile" name="dictFile" value="点击上传">
+                <div id="displayBox" style="display:none;">
+                <span id="displayName" style="font-weight:bold;">${file}</span>
+                <span class="close" style="float:none;margin-top:2px;">11</span>
+             </div>
+        </div>
+        <div class="form-group">
+        <label for="date">日期</label>
+              <input type="text" class="form-control" id="date" name="date" value="${date}">
+        </div>
+      </div>
+    </form>
+    </div>
+    </div>
+</script>
+
+<script id="listTemp" type="text/x-jquery-tmpl">
+    <tr data-itemid="${_id}" data-itemfile="${file}" data-itemdate="${date}">
+        <td width="10%"><img src='/images/photo/${file}.jpg'></td>
+        <td width="15%">${user}</td>
+        <td>${date}</td>
+        <td>
+            <a href="javascript:;" type="button" class="edit-btn">编辑</a>
+            <a href="javascript:;" type="button" class="del-btn">删除</a>
+        </td>
+    </tr>
+</script>
+

@@ -6,3 +6,7 @@ client/src/images/
 .idea/jsLibraryMappings.xml
 .idea/libraries/
 .idea/vcs.xml
+
+.DS_Store
+
+.DS_Store
