@@ -1,16 +1,21 @@
 <div class="content-wrap">
     <form id="queryBox" class="form-inline">
         <div class="form-group">
-            <label for="sportNameQ">创建人</label>
-            <input type="text" class="form-control" id="recordUserQ" name="recordUserQ">
+            <label for="userQ">创建人</label>
+            <input type="text" class="form-control" id="userQ" name="userQ">
         </div>
         <div class="form-group">
-            <label for="sportHotQ">记录类型</label>
-           <input type="text" class="form-control" id="recordTypeQ" name="recordTypeQ">
+            <label for="typeQ">记录类型</label>
+            <select class="form-control" id="typeQ" name="typeQ">
+                <option value="">不限</option>
+                <option value="0">食物</option>
+                <option value="1">运动</option>
+                <option value="1">体重</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="sportHotQ">内容</label>
-            <input type="text" class="form-control" id="recordContentQ" name="recordContentQ">
+            <label for="dateQ">日期</label>
+            <input type="text" class="form-control" id="dateQ" name="dateQ">
         </div>
         <button type="button" class="btn btn-primary query-btn">查询</button>
         <button type="button" class="btn btn-primary add-btn">新建</button>
@@ -19,8 +24,10 @@
         <thead>
             <tr>
                 <th width="30%">类型</th>
-                <th>内容</th>
-                <th>创建人</th>
+                <th>值</th>
+                <th>日期</th>
+                <th>用户</th>
+                <th>操作</th>
             </tr>
         </thead>
         <tbody id="listBody">
@@ -47,12 +54,20 @@
        {{/if}}
       <div class="col-xs-12">
         <div class="form-group">
-        <label for="foodName">运动名</label>
-              <input type="text" class="form-control" id="sportName" name="sportName" value="${sportName}">
+        <label for="type">类型</label>
+              <input type="text" class="form-control" id="type" name="type" value="${type}">
         </div>
         <div class="form-group">
-        <label for="foodHot">热量</label>
-              <input type="text" class="form-control" id="sportHot" name="sportHot" value="${sportHot}">
+        <label for="value">值</label>
+              <input type="text" class="form-control" id="value" name="value" value="${value}">
+        </div>
+        <div class="form-group">
+        <label for="date">日期</label>
+              <input type="text" class="form-control" id="date" name="date" value="${date}">
+        </div>
+        <div class="form-group">
+        <label for="user">用户</label>
+              <input type="text" class="form-control" id="user" name="user" value="${user}">
         </div>
       </div>
     </form>
@@ -62,8 +77,10 @@
 
 <script id="listTemp" type="text/x-jquery-tmpl">
     <tr data-itemid="${_id}" data-itemname="${sportName}">
-        <td width="15%">${sportName}</td>
-        <td >${sportHot}</td>
+        <td width="15%">${type}</td>
+        <td >${value}</td>
+        <td >${date}</td>
+        <td >${user}</td>
         <td>
             <a href="javascript:;" type="button" class="edit-btn">编辑</a>
             <a href="javascript:;" type="button" class="del-btn">删除</a>

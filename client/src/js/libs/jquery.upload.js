@@ -28,7 +28,7 @@
 		if (!canSend) {
 			return;
 		}
-		
+		console.log(frameCount);
 		var frameName = 'upload_frame_' + (frameCount++);
 		var iframe = $('<iframe style="position:absolute;top:-9999px" />').attr('name', frameName);
 		var form = $('<form method="post" style="display:none;" enctype="multipart/form-data" />').attr('name', 'form_' + frameName);

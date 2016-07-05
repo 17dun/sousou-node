@@ -3,10 +3,7 @@ log/
 pid
 client/src/images/
 .ide/
-.idea/jsLibraryMappings.xml
-.idea/libraries/
-.idea/vcs.xml
-
 .DS_Store
-
-.DS_Store
+app/.DS_Store
+client/src/photo/
+.idea/

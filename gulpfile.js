@@ -22,7 +22,7 @@ gulp.task('watch', function () {
     gulp.watch([
         './pid',
         'app/template/**/*.*',
-        'client/src/**/*.*'
+        'client/src/!photo/*.*'
     ], function (event) {
         gulp.src('').pipe(livereload());
     })

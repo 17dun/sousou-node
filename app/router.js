@@ -58,9 +58,17 @@ function setMap(ctrs) {
 
     //记录管理
     router.get('/record', ctrs.record.show);
+    router.get('/record/list', ctrs.record.list);
+    router.get('/record/save', ctrs.record.save);
+    router.get('/record/del', ctrs.record.del);
+
+
+
 
     //照片管理
     router.get('/photo', ctrs.photo.show);
+    router.post('/photo/addFile', ctrs.photo.addFile);
+    router.get('/photo/delFile', ctrs.photo.delFile);
     router.get('/photo/list', ctrs.photo.list);
     router.get('/photo/save', ctrs.photo.save);
     router.get('/photo/del', ctrs.photo.del);

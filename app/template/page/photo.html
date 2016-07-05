@@ -44,7 +44,7 @@
             <input type="button" id="dictFile" name="dictFile" value="点击上传">
                 <div id="displayBox" style="display:none;">
                 <span id="displayName" style="font-weight:bold;">${file}</span>
-                <span class="close" style="float:none;margin-top:2px;">11</span>
+                <span class="close" style="float:none;margin-top:2px;"></span>
              </div>
         </div>
         <div class="form-group">
@@ -59,7 +59,7 @@
 
 <script id="listTemp" type="text/x-jquery-tmpl">
     <tr data-itemid="${_id}" data-itemfile="${file}" data-itemdate="${date}">
-        <td width="10%"><img src='/images/photo/${file}.jpg'></td>
+        <td width="10%"><img src='/photo/${file}.jpg'></td>
         <td width="15%">${user}</td>
         <td>${date}</td>
         <td>

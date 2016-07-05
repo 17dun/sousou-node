@@ -8,16 +8,23 @@ var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = require('../../conf').db;
 var ObjectId =  require('mongodb').ObjectID;
 module.exports = {
-    //返回某一个用户收到的信息
-    getList: function(uid){
+    list: function(data){
+
+        var pageSize = data.pageSize*1 || 10;
+        if(data.pageNum){
+            from = (data.pageNum - 1) * data.pageSize;
+        }else{
+            from = 0;
+        }
+
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
-                collection.find({uid:uid}).toArray(function(err, rt){
+                collection.find().skip(from).limit(pageSize).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
-                            msg: '查询失败',
+                            msg: '数据库查询失败',
                             data: err
                         });
                     }else{
@@ -31,27 +38,55 @@ module.exports = {
             });
         });
     },
-    //新增消息
-    add: function(data){
+
+    save: function(data){
+        var self = this;
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
-                data.time = new Date();
+                if(data._id){
+                    //保存已有的
+                    data._id = ObjectId(data._id);
+                }else{
+                    data.status = 0;
+                    data.taskNum = 0;
+                    delete data._id;
+                }
+
                 collection.save(data, function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
-                            msg: '操作失败',
-                            data: err
+                            msg: '失败'
                         });
                     }else{
                         resovel({
                             code: 0,
-                            msg: '操作成功',
-                            data: rt
+                            msg: '成功'
                         });
                     }
                 });
+            });
+        });
+    },
+    del: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('record');
+                var whereStr = {_id:ObjectId(data.id)}
+                collection.remove(whereStr, function(err, rt){
+                    if(err){
+                        resovel({
+                            code: 1,
+                            msg: '失败'
+                        });
+                    }else{
+                        resovel({
+                            code: 0,
+                            msg: '成功'
+                        });
+                    }
+                })
             });
         });
     }

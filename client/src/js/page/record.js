@@ -4,7 +4,6 @@
  * @author xiaoguang01
  * @date 2015/11/11
  */
-document.write('<script src="/js/libs/jquery.upload.js"></script>');
 zeus.page({
     initDatas: function () {
         self.list = [];
@@ -48,7 +47,7 @@ zeus.page({
         var self = this;
         var data = self.parts.$form.serialize();
         $.ajax({
-            url: '/photo/list',
+            url: '/record/list',
             type: 'GET',
             dataType: 'json',
             data: data,
@@ -113,16 +112,12 @@ zeus.page({
 
     save: function(callback){
         var self = this;
-        var date = $('#date').val();
-        var file = $('#displayName').html();
+        var data = $('#editform').serialize();
         $.ajax({
-            url: '/photo/save',
+            url: '/record/save',
             type: 'GET',
-            data: {
-                date: date,
-                file: file
-            },
             dataType: 'json',
+            data: data,
             success: function(rt){
                 callback();
             },
@@ -133,26 +128,6 @@ zeus.page({
 
     },
 
-
-    addFile: function(){
-        var self = this;
-        $.upload({
-            // 上传地址
-            url: '/photo/addFile',
-            // 文件域名字
-            fileName: 'file',
-            // 上传完成后, 返回json, text
-            dataType: 'json',
-            // 上传之后回调
-            onComplate: function(data) {
-                if(data.code==0){
-
-                    $('#displayName').html(data.data.fileName);
-                    $('#displayBox').show();
-                }
-            }
-        });
-    },
 
     del: function(id,fileName){
         var self = this;
@@ -165,19 +140,7 @@ zeus.page({
                     text: "确定", 
                     click: function(){
                         $.ajax({
-                            url: '/photo/del?id='+id,
-                            type: 'GET',
-                            dataType: 'json',
-                            success: function(rt){
-                                self.msg(1);
-                                self.getList();
-                            },
-                            error: function(rt){
-                                self.msg(0);
-                            }
-                        });
-                        $.ajax({
-                            url: '/photo/delFile?fileName='+fileName,
+                            url: '/record/del?id='+id,
                             type: 'GET',
                             dataType: 'json',
                             success: function(rt){
