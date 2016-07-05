@@ -8566,3 +8566,4 @@ NOTICE: pid::29612 2016-06-01 12:54:25     at Object.<anonymous> (/Users/xiaogua
 NOTICE: pid::29612 2016-06-01 12:54:27     at Object.<anonymous> (/Users/xiaoguang/Documents/code/sousou-node/app/bootSrtap.js:53:11) { logid: 1464756867636596,  type: 'pv',  method: 'GET',  url: '/sport',  userInfo: undefined }
 NOTICE: pid::29612 2016-06-01 12:54:28     at Object.<anonymous> (/Users/xiaoguang/Documents/code/sousou-node/app/bootSrtap.js:53:11) { logid: 1464756868054296,  type: 'pv',  method: 'GET',  url: '/sport/list?sportNameQ=&sportHotQ=',  userInfo: undefined }
 NOTICE: pid::29612 2016-06-01 12:54:28     at Object.<anonymous> (/Users/xiaoguang/Documents/code/sousou-node/app/bootSrtap.js:53:11) { logid: 1464756868247043,  type: 'pv',  method: 'GET',  url: '/sport/',  userInfo: undefined }
+NOTICE: pid::40617 2016-07-05 15:12:55     at Object.<anonymous> (/Users/xiaoguang/Documents/code/sousou-node/app/bootSrtap.js:70:7) UI Server已经启动：http://127.0.0.1:8000
