@@ -56,6 +56,11 @@ module.exports = {
     //添加食物
     save: function *(){
         var data = this.query;
+        var exisFileRt = yield photoModel.getExsiFile(data);
+        if(exisFileRt.code){
+            fs.unlinkSync(path.join('./client/src/photo', exisFileRt.file+'.jpg'));
+            yield photoModel.del({id:exisFileRt.id});
+        }
         var rs = yield photoModel.save(data);
         yield this.api(rs);
     },

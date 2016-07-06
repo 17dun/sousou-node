@@ -20,7 +20,7 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('photo');
-                collection.find().skip(from).limit(pageSize).toArray(function(err, rt){
+                collection.find().skip(from).limit(pageSize).sort({_id:-1}).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
@@ -47,9 +47,8 @@ module.exports = {
                     //保存已有的
                     data._id = ObjectId(data._id);
                 }else{
-                    data.status = 0;
-                    data.taskNum = 0;
                     delete data._id;
+                    //如果存在就替换
                 }
 
                 collection.save(data, function(err, rt){
@@ -68,6 +67,22 @@ module.exports = {
             });
         });
     },
+    //查询是否存在相同日期相同的图片
+    getExsiFile: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db) {
+                var collection = db.collection('photo');
+                collection.find({user:data.user,date:data.date}).toArray(function(err, rt){
+                    if(err||rt.length<1){
+                        resovel({code:0});
+                    }else{
+                        resovel({code:1,file:rt[0].file,id:rt[0]._id});
+                    }
+                })
+            });
+        });
+    },
+
     del: function(data){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
