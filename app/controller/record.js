@@ -24,6 +24,11 @@ module.exports = {
     //添加食物
     save: function *(){
         var data = this.query;
+        var exisRt = yield recordModel.getExsi(data);
+        console.log(exisRt.code);
+        if(exisRt.code){
+            yield recordModel.del({id:exisRt.id});
+        }
         var rs = yield recordModel.save(data);
         yield this.api(rs);
     },

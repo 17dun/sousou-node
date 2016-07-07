@@ -89,6 +89,22 @@ module.exports = {
                 })
             });
         });
-    }
+    },
+
+    //查询是否存在相同日期相同的图片
+    getExsi: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db) {
+                var collection = db.collection('record');
+                collection.find({user:data.user,date:data.date}).toArray(function(err, rt){
+                    if(err||rt.length<1){
+                        resovel({code:0});
+                    }else{
+                        resovel({code:1,id:rt[0]._id});
+                    }
+                })
+            });
+        });
+    },
 
 }
