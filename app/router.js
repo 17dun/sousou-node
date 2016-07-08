@@ -60,6 +60,7 @@ function setMap(ctrs) {
     router.get('/record', ctrs.record.show);
     router.get('/record/list', ctrs.record.list);
     router.get('/record/save', ctrs.record.save);
+    router.get('/record/saveAll', ctrs.record.saveAll);
     router.get('/record/del', ctrs.record.del);
 
 

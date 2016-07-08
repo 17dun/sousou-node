@@ -34,6 +34,14 @@ module.exports = {
     },
 
     //添加食物
+    saveAll: function *(){
+        var data = this.query;
+
+        //var rs = yield recordModel.save(data);
+        yield this.api({code:0});
+    },
+
+    //添加食物
     del: function *(){
         var data = this.query;
         var rs = yield recordModel.del(data);
