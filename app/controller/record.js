@@ -35,10 +35,9 @@ module.exports = {
 
     //添加食物
     saveAll: function *(){
-        var data = this.query;
-
-        //var rs = yield recordModel.save(data);
-        yield this.api({code:0});
+        var data = this.request.body;
+        var rs = yield recordModel.saveAll(data);
+        yield this.api(rs);
     },
 
     //添加食物

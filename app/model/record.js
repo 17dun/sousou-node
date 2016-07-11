@@ -10,7 +10,7 @@ var ObjectId =  require('mongodb').ObjectID;
 module.exports = {
     list: function(data){
 
-        var pageSize = data.pageSize*1 || 10;
+        var pageSize = data.pageSize*1 || 100;
         if(data.pageNum){
             from = (data.pageNum - 1) * data.pageSize;
         }else{
@@ -69,6 +69,41 @@ module.exports = {
             });
         });
     },
+
+    //仅仅征对食物和运动的类型插入多条
+    saveAll: function(data){
+        return new Promise(function(resovel, reject){
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('record');
+                data.recordList.forEach(function(item){
+                    console.log(item);
+                    var obj = {
+                        type: data.type,
+                        date: data.date,
+                        user: data.user,
+                        name: item.name,
+                        value: item.weight,
+                        hot: item.hot
+                    }
+                    collection.save(obj, function(err,rt){
+                        if(err){
+                        resovel({
+                            code: 1,
+                            msg: '失败'
+                        });
+                    }else{
+                        resovel({
+                            code: 0,
+                            msg: '成功'
+                      
+                        })
+                    }
+                })
+            });
+        });
+        });
+    },
+
     del: function(data){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){

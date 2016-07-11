@@ -24,8 +24,10 @@
         <thead>
             <tr>
                 <th width="30%">类型</th>
-                <th>值</th>
                 <th>日期</th>
+                <th>名称</th>
+                <th>量</th>
+                <th>热量</th>
                 <th>用户</th>
                 <th>操作</th>
             </tr>
@@ -78,8 +80,10 @@
 <script id="listTemp" type="text/x-jquery-tmpl">
     <tr data-itemid="${_id}" data-itemname="${sportName}">
         <td width="15%">${type}</td>
-        <td >${value}</td>
         <td >${date}</td>
+        <td >${name}</td>
+        <td >${value}</td>
+        <td >${hot}</td>
         <td >${user}</td>
         <td>
             <a href="javascript:;" type="button" class="edit-btn">编辑</a>
