@@ -9,7 +9,7 @@ var DB_CONN_STR = require('../conf').db;
 var ObjectId =  require('mongodb').ObjectID;
 
 MongoClient.connect(DB_CONN_STR, function(err, db){
-    var collection = db.collection('food');
+    var collection = db.collection('sport');
     collection.find().toArray(function(err, rt){
         if(err){
             resovel({
@@ -20,14 +20,15 @@ MongoClient.connect(DB_CONN_STR, function(err, db){
         }else{
 
             for(var i=0; i<rt.length; i++){
-                if(rt[i].foodHot.indexOf('毫升')!=-1){
-                    var newHot = rt[i].foodHot.replace('热量：','').replace(' 大卡(每100毫升)','');
-                    var name = rt[i].foodName;
+                if(rt[i].hot.indexOf('大卡')!=-1){
+                    var newHot = rt[i].hot.replace('大卡','');
+                    var name = rt[i].name;
                     console.log(newHot);
-                    collection.update({foodName:name},{$set:{foodHot:newHot,unit:'l'}})
+                    collection.update({name:name},
+                        {$set: {hot:newHot}
+                        }
+                    )
                 }
-
-                //console.log(rt[i].foodHot);
             }
         }
     });
