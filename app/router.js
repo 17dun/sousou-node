@@ -59,6 +59,7 @@ function setMap(ctrs) {
     //记录管理
     router.get('/record', ctrs.record.show);
     router.get('/record/list', ctrs.record.list);
+    router.get('/record/foodList', ctrs.record.foodList);
     router.get('/record/save', ctrs.record.save);
     router.post('/record/saveAll', ctrs.record.saveAll);
     router.get('/record/del', ctrs.record.del);

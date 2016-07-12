@@ -20,6 +20,14 @@ module.exports = {
 
     },
 
+    //获取列表
+    foodList: function *(){
+        var data = this.query;
+        var rs = yield recordModel.foodList(data);
+        yield this.api(rs);
+
+    },
+
 
     //添加食物
     save: function *(){
