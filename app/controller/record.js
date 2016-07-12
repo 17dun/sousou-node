@@ -28,6 +28,13 @@ module.exports = {
 
     },
 
+    //获取列表
+    sportList: function *(){
+        var data = this.query;
+        var rs = yield recordModel.sportList(data);
+        yield this.api(rs);
+
+    },
 
     //添加食物
     save: function *(){

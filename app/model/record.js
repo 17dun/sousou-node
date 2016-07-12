@@ -67,6 +67,34 @@ module.exports = {
         });
     },
 
+    sportList: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('record');
+                var obj = {
+                    user: data.user,
+                    date: data.date,
+                    type: 'sport'
+                }
+                collection.find(obj).toArray(function(err, rt){
+                    if(err){
+                        resovel({
+                            code: 1,
+                            msg: '数据库查询失败',
+                            data: err
+                        });
+                    }else{
+                        resovel({
+                            code: 0,
+                            msg: '查询成功',
+                            data: rt
+                        });
+                    }
+                });
+            });
+        });
+    },
+
     save: function(data){
         var self = this;
         return new Promise(function (resovel, reject) {
