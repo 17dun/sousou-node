@@ -19,10 +19,12 @@
         </div>
         <button type="button" class="btn btn-primary query-btn">查询</button>
         <button type="button" class="btn btn-primary add-btn">新建</button>
+         <button type="button" class="btn btn-primary delall-btn">批量删除</button>
     </form>
      <table class="table table-bordered table-striped task-table" id="listBox">
         <thead>
             <tr>
+                 <th width="5%"><input type="checkbox" value="1"  class="all-check" /></th>
                 <th width="30%">类型</th>
                 <th>日期</th>
                 <th>名称</th>
@@ -79,6 +81,7 @@
 
 <script id="listTemp" type="text/x-jquery-tmpl">
     <tr data-itemid="${_id}" data-itemname="${sportName}">
+        <td width="5%"><input class="item-check" type="checkbox"/></td>
         <td width="15%">${type}</td>
         <td >${date}</td>
         <td >${name}</td>

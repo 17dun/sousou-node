@@ -60,5 +60,10 @@ module.exports = {
         var data = this.query;
         var rs = yield recordModel.del(data);
         yield this.api(rs);
+    },
+    delall: function *(){
+        var data = this.request.body;
+        var rs = yield recordModel.delall(data);
+        yield this.api(rs);
     }
 };

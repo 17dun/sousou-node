@@ -70,5 +70,10 @@ module.exports = {
         var data = this.query;
         var rs = yield photoModel.del(data);
         yield this.api(rs);
+    },
+    delall: function *(){
+        var data = this.request.body;
+        var rs = yield photoModel.delall(data);
+        yield this.api(rs);
     }
 };

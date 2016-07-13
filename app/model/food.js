@@ -20,7 +20,7 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('food');
-                collection.find().skip(from).limit(pageSize).toArray(function(err, rt){
+                collection.find().skip(from).limit(pageSize).sort({_id:1}).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
@@ -89,6 +89,41 @@ module.exports = {
             });
         });
     },
+    delall: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('food');
+                var num = 0;
+                if(!data.ids||!data.ids.length){
+                    resovel({
+                        code: 1,
+                        msg: '失败'
+                    });
+                    return;
+                }
+                data.ids.forEach(function(item){
+                    var whereStr = {_id:ObjectId(item)}
+                    collection.remove(whereStr, function(err, rt){
+                        if(err){
+                            resovel({
+                                code: 1,
+                                msg: '失败'
+                            });
+                        }else{
+                            num++;
+                            if(num==data.ids.length){
+                                resovel({
+                                    code: 0,
+                                    msg: '成功'
+                                });
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    },
+    
     detail: function(fid){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){

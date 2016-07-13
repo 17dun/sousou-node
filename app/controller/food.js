@@ -39,5 +39,12 @@ module.exports = {
         var data = this.query;
         var rs = yield foodModel.del(data);
         yield this.api(rs);
+    },
+    
+    //添加食物
+    delall: function *(){
+        var data = this.request.body;
+        var rs = yield foodModel.delall(data);
+        yield this.api(rs);
     }
 };

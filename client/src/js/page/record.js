@@ -40,7 +40,45 @@ zeus.page({
             var fileName = $(this).parent().parent().data('itemfile');
             self.del(id,fileName);
         });
+        $('#listBox').on('click', '.all-check', function(){
+            self.allcheck($(this).is(':checked'));
+        });
 
+        $('.delall-btn').on('click', function(){
+            self.alldel();
+        });
+
+    },
+
+    alldel: function(){
+        var ids = [];
+        $('.item-check:checked').each(function(i,item){
+            ids.push($(item).parent().parent().data('itemid'));
+        });
+        $.ajax({
+            url: '/record/delall',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                ids: ids
+            },
+            success: function(rt){
+                if(!rt.code){
+                    self.getList();
+                }
+                
+            },
+            error: function(rt){
+                //alert('失败');
+            }
+        });
+
+    },
+
+    allcheck: function(flag){
+        $('.item-check').each(function(i,item){
+            $(item).prop('checked',flag)
+        });
     },
 
     getList: function(){
