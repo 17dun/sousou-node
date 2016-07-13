@@ -137,6 +137,7 @@ module.exports = {
                         type: data.type,
                         date: data.date,
                         user: data.user,
+                        unitHot: item.unitHot,
                         name: item.name,
                         value: item.weight,
                         file: item.file,
