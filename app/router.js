@@ -35,7 +35,7 @@ function setMap(ctrs) {
     router.get('/food/list', ctrs.food.list);
     router.get('/food/save', ctrs.food.save);
     router.get('/food/del', ctrs.food.del);
-    router.post('/food/delall', ctrs.food.delall)
+    router.post('/food/delall', ctrs.food.delall);
 
 
     //运动管理
@@ -43,7 +43,7 @@ function setMap(ctrs) {
     router.get('/sport/list', ctrs.sport.list);
     router.get('/sport/save', ctrs.sport.save);
     router.get('/sport/del', ctrs.sport.del);
-    router.post('/sport/delall', ctrs.sport.delall)
+    router.post('/sport/delall', ctrs.sport.delall);
 
 
     //用户管理
@@ -67,7 +67,8 @@ function setMap(ctrs) {
     router.get('/record/save', ctrs.record.save);
     router.post('/record/saveAll', ctrs.record.saveAll);
     router.get('/record/del', ctrs.record.del);
-    router.post('/record/delall', ctrs.record.delall)
+    router.post('/record/delall', ctrs.record.delall);
+    router.get('/record/updateById', ctrs.record.updateById);
 
 
 
@@ -79,6 +80,6 @@ function setMap(ctrs) {
     router.get('/photo/list', ctrs.photo.list);
     router.get('/photo/save', ctrs.photo.save);
     router.get('/photo/del', ctrs.photo.del);
-    router.post('/photo/delall', ctrs.photo.delall)
+    router.post('/photo/delall', ctrs.photo.delall);
 }
 module.exports = set;

@@ -126,6 +126,32 @@ module.exports = {
         });
     },
 
+    updateById: function(data){
+        var self = this;
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('record');
+                
+                var _id = ObjectId(data.recordId);
+                var hot = data['hot'];
+                var weight = data['weight'];
+                collection.update({_id:_id},{$set:{value:weight,hot:hot}}, function(err, rt){
+                    if(err){
+                        resovel({
+                            code: 1,
+                            msg: '失败'
+                        });
+                    }else{
+                        resovel({
+                            code: 0,
+                            msg: '成功'
+                        });
+                    }
+                });
+            });
+        });
+    },
+
     //仅仅征对食物和运动的类型插入多条
     saveAll: function(data){
         return new Promise(function(resovel, reject){
