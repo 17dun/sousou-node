@@ -63,6 +63,13 @@ module.exports = {
     },
 
     //添加食物
+    getHotInfo: function *(){
+        var data = this.query;
+        var rs = yield recordModel.getHotInfo(data);
+        yield this.api(rs);
+    },
+
+    //添加食物
     del: function *(){
         var data = this.query;
         var rs = yield recordModel.del(data);

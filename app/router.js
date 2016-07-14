@@ -69,7 +69,7 @@ function setMap(ctrs) {
     router.get('/record/del', ctrs.record.del);
     router.post('/record/delall', ctrs.record.delall);
     router.get('/record/updateById', ctrs.record.updateById);
-
+    router.get('/record/getHotInfo', ctrs.record.getHotInfo);
 
 
 
