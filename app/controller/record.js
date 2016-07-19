@@ -58,6 +58,12 @@ module.exports = {
     //添加食物
     saveAll: function *(){
         var data = this.request.body;
+        if(!data||data.length==0){
+            yield this.api({
+                code:1,
+                data:null
+            });
+        }
         var rs = yield recordModel.saveAll(data);
         yield this.api(rs);
     },

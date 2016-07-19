@@ -174,7 +174,7 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
-                
+                console.log(data);
                 var _id = ObjectId(data.recordId);
                 var hot = data['hot'];
                 var weight = data['weight'];
@@ -303,5 +303,4 @@ module.exports = {
             });
         });
     },
-
 }
