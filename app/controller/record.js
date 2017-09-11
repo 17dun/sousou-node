@@ -76,6 +76,14 @@ module.exports = {
     },
 
     //添加食物
+    getByDate: function *(){
+        var data = this.query;
+        console.log(data);
+        var rs = yield recordModel.getByDate(data);
+        yield this.api(rs);
+    },
+
+    //添加食物
     del: function *(){
         var data = this.query;
         var rs = yield recordModel.del(data);

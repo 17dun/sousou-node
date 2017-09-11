@@ -67,6 +67,30 @@ module.exports = {
             });
         });
     },
+
+    getByDate: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db) {
+                var collection = db.collection('photo');
+                var obj = {
+                    user: data.user,
+                    date: data.date
+                }
+                collection.find(obj).toArray(function(err, rt){
+                    if(err){
+                        reject({
+                            code: 1,
+                            msg: '数据库查询失败',
+                            data: err
+                        });
+                    }else{
+                        resovel(rt[0])
+                    }
+                });
+            });
+        });
+    },
+
     //查询是否存在相同日期相同的图片
     getExsiFile: function(data){
         return new Promise(function (resovel, reject) {

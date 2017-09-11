@@ -7,6 +7,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = require('../../conf').db;
 var ObjectId =  require('mongodb').ObjectID;
+var photoModel = require('./photo');
 module.exports = {
     list: function(data){
 
@@ -77,6 +78,54 @@ module.exports = {
                             }
                         });
                     }
+                });
+            });
+        });
+    },
+    getByDate: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('record');
+                var obj = {
+                    user: data.user||'',
+                    date: data.date||''
+                };
+                photoModel.getByDate(obj).then(function(){
+                collection.find(obj).toArray(function(err, rt){
+                        if(err){
+                            resovel({
+                                code: 1,
+                                msg: '数据库查询失败',
+                                data: err
+                            });
+                        }else{
+
+                            var inHot = 0;
+                            var outHot = 0;
+                            var weight = 0;
+                            console.log(rt);
+                            rt.forEach(function(item){
+                                if(item.type=="food"){
+                                    inHot += item.hot*1;
+                                }else if(item.type=='sport'){
+                                    outHot += item.hot*1;
+                                }else{
+                                    weight = item.hot;
+                                }
+                            });
+                            resovel({
+                                code: 0,
+                                msg: '查询成功',
+                                data: {
+                                    inHot: inHot,
+                                    outHot: outHot,
+                                    weight: weight
+                                }
+                            });
+                        }
+                    });
+                
+                    
                 });
             });
         });
