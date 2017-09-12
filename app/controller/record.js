@@ -75,11 +75,18 @@ module.exports = {
         yield this.api(rs);
     },
 
-    //添加食物
+    //获取某人的所有数据
     getByDate: function *(){
         var data = this.query;
         console.log(data);
         var rs = yield recordModel.getByDate(data);
+        yield this.api(rs);
+    },
+
+    //获取某人的所有数据
+    getByUser: function *(){
+        var data = this.query;
+        var rs = yield recordModel.getByUser(data);
         yield this.api(rs);
     },
 

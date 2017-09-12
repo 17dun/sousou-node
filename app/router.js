@@ -71,6 +71,7 @@ function setMap(ctrs) {
     router.get('/record/updateById', ctrs.record.updateById);
     router.get('/record/getHotInfo', ctrs.record.getHotInfo);
     router.get('/record/getByDate', ctrs.record.getByDate);
+    router.get('/record/getByUser', ctrs.record.getByUser);
 
 
 

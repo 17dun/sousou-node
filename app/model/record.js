@@ -131,6 +131,67 @@ module.exports = {
         });
     },
 
+    getByUser: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('record');
+                var obj = {
+                    user: data.user||''
+                };
+                photoModel.getByUser(obj).then(function(photos){
+                    console.log(photos);
+                collection.find(obj).toArray(function(err, rt){
+                        if(err){
+                            resovel({
+                                code: 1,
+                                msg: '数据库查询失败',
+                                data: err
+                            });
+                        }else{
+
+                            var inHot = 0;
+                            var outHot = 0;
+                            var weight = 0;
+                            console.log(rt);
+                            var rtObj = {};
+                            //两次循环，第一次循环没有photo，第二次处理photo。
+
+                            //先不管photo的情况，把hot和weight归好
+                            rt.forEach(function(item){
+                                //如果存在，就追加，如果不存在就定义，对于日期存在，但是字段不存在也一样再判断一次
+                                if(rtObj[item.date]){
+
+                                }else{
+                                    rtObj[item.date]
+                                }
+
+
+                                if(item.type=="food"){
+                                    inHot += item.hot*1;
+                                }else if(item.type=='sport'){
+                                    outHot += item.hot*1;
+                                }else{
+                                    weight = item.hot;
+                                }
+                            });
+                            resovel({
+                                code: 0,
+                                msg: '查询成功',
+                                data: {
+                                    hot: inHot-outHot,
+                                    outHot: outHot,
+                                    weight: weight
+                                }
+                            });
+                        }
+                    });
+                
+                    
+                });
+            });
+        });
+    },
+
     foodList: function(data){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
