@@ -139,7 +139,6 @@ module.exports = {
                     user: data.user||''
                 };
                 photoModel.getByUser(obj).then(function(photos){
-                    console.log(photos);
                 collection.find(obj).toArray(function(err, rt){
                         if(err){
                             resovel({
@@ -148,39 +147,73 @@ module.exports = {
                                 data: err
                             });
                         }else{
-
-                            var inHot = 0;
-                            var outHot = 0;
-                            var weight = 0;
-                            console.log(rt);
+                            var rsArr = rt.concat(photos);
+                            console.log(rsArr);
                             var rtObj = {};
                             //两次循环，第一次循环没有photo，第二次处理photo。
+                            var dateArr = [];
+                            var weightArr = [];
+                            var hotArr = [];
+                            var photoArr = [];
+                            //先归到一起
+                            rsArr.forEach(function(item){
+                                var dateSplit = item.date.split('-');
+                                var key = dateSplit[0]*30*12 + dateSplit[1]*12 + dateSplit[2];
 
-                            //先不管photo的情况，把hot和weight归好
-                            rt.forEach(function(item){
                                 //如果存在，就追加，如果不存在就定义，对于日期存在，但是字段不存在也一样再判断一次
-                                if(rtObj[item.date]){
-
+                                if(rtObj[key]){
+                                    if(item.type=="weight"){
+                                        rtObj[key]['weight'] = item.value;
+                                    }
+                                    if(item.type=="food"){
+                                        
+                                        rtObj[key]['hot'] += item.hot*1;
+                                    }
+                                    if(item.type=="sport"){
+                                        rtObj[key]['hot'] -= item.hot*1;
+                                    }
+                                    if(!item.type){
+                                        rtObj[key]['photo'] = item.file;
+                                    }
                                 }else{
-                                    rtObj[item.date]
+                                    rtObj[key] = {date:item.date, hot:0};
+                                    rtObj[key]['photo'] = '';
+                                    rtObj[key]['weight'] = 0;
+                                    if(item.type=="weight"){
+                                        rtObj[key]['weight'] = item.value;
+                                    }
+                                    if(item.type=="food"){
+                                        rtObj[key]['hot'] += item.hot*1;
+                                    }
+                                    if(item.type=="sport"){
+                                        rtObj[key]['hot'] -= item.hot*1;
+                                    }
+                                    if(!item.type){
+                                        rtObj[key]['photo'] = item.file;
+                                    }
                                 }
-
-
-                                if(item.type=="food"){
-                                    inHot += item.hot*1;
-                                }else if(item.type=='sport'){
-                                    outHot += item.hot*1;
-                                }else{
-                                    weight = item.hot;
-                                }
+                            });
+                            for(rtItem in rtObj){
+                                    //时间排序
+                                    dateArr.push(rtObj[rtItem].date);
+                                    weightArr.push(rtObj[rtItem].weight);
+                                    hotArr.push(Math.floor(rtObj[rtItem].hot/100));
+                                    photoArr.push(rtObj[rtItem].photo);
+                            }
+                            weightArr.forEach(function(weightItem, i){
+                                if(weightItem==0&&i>0){
+                                    weightArr[i] = weightArr[i-1];
+                                } 
                             });
                             resovel({
                                 code: 0,
                                 msg: '查询成功',
                                 data: {
-                                    hot: inHot-outHot,
-                                    outHot: outHot,
-                                    weight: weight
+                                    rtObj: rtObj,
+                                    dateArr: dateArr,
+                                    weightArr: weightArr,
+                                    hotArr: hotArr,
+                                    photoArr: photoArr
                                 }
                             });
                         }
