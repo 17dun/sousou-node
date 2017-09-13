@@ -14,7 +14,8 @@ module.exports = {
 
     //获取列表
     list: function *(){
-        var data = this.query;
+        var data = this.query||{};
+        console.log(data);
         var rs = yield recordModel.list(data);
         yield this.api(rs);
 
@@ -40,7 +41,6 @@ module.exports = {
     save: function *(){
         var data = this.query;
         var exisRt = yield recordModel.getExsi(data);
-        console.log(exisRt.code);
         if(exisRt.code){
             yield recordModel.del({id:exisRt.id});
         }

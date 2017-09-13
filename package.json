@@ -19,7 +19,7 @@
     "koa-redis": "^1.0.1",
     "koa-router": "^5.1.2",
     "koa-static": "^1.4.9",
-    "mongodb": "^2.1.20",
+    "mongodb": "^2.2.31",
     "opn": "^3.0.3",
     "zeus-template": "*"
   },

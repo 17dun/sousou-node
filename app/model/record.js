@@ -21,7 +21,7 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
-                collection.find().skip(from).limit(pageSize).toArray(function(err, rt){
+                collection.find(data).skip(from).limit(pageSize).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
@@ -287,27 +287,34 @@ module.exports = {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
                 if(data._id){
-                    //保存已有的
                     data._id = ObjectId(data._id);
                 }else{
                     data.status = 0;
                     data.taskNum = 0;
-                    delete data._id;
                 }
 
-                collection.save(data, function(err, rt){
-                    if(err){
-                        resovel({
-                            code: 1,
-                            msg: '失败'
-                        });
-                    }else{
-                        resovel({
+
+                collection.save(data, function(){
+                    resovel({
                             code: 0,
-                            msg: '成功'
+                            msg: 'ok'
                         });
-                    }
-                });
+                })
+
+                // collection.find({user: data.user, type: 'weight', times: data.date}).toArray(function(err, rt){
+                //     console.log(rt)
+                //     if(err){
+                //         resovel({
+                //             code: 1,
+                //             msg: '失败'
+                //         });
+                //     }else{
+                //         resovel({
+                //             code: 0,
+                //             msg: '成功'
+                //         });
+                //     }
+                // });
             });
         });
     },
@@ -344,7 +351,6 @@ module.exports = {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
                 data.recordList.forEach(function(item){
-                    console.log(item);
                     var obj = {
                         type: data.type,
                         date: data.date,
@@ -355,7 +361,7 @@ module.exports = {
                         file: item.file,
                         hot: item.hot
                     }
-                    collection.save(obj, function(err,rt){
+                    collection.insertOne(obj, function(err,rt){
                         if(err){
                         resovel({
                             code: 1,

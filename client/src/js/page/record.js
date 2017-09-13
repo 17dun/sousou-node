@@ -88,7 +88,7 @@ zeus.page({
             url: '/record/list',
             type: 'GET',
             dataType: 'json',
-            data: data,
+            data: {},
             success: function(rt){
                 self.list = rt.data;
                 self.renderList();

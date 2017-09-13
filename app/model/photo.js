@@ -106,6 +106,7 @@ module.exports = {
                             data: err
                         });
                     }else{
+                        
                         resovel(rt);
                     }
                 });
