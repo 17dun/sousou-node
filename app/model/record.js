@@ -293,13 +293,12 @@ module.exports = {
                     data.taskNum = 0;
                 }
 
-
-                collection.save(data, function(){
+                collection.findOneAndUpdate({user: data.user, type: 'weight', date: data.date},data,{upsert:true}, function(){
                     resovel({
                             code: 0,
                             msg: 'ok'
                         });
-                })
+                });
 
                 // collection.find({user: data.user, type: 'weight', times: data.date}).toArray(function(err, rt){
                 //     console.log(rt)
