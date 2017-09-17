@@ -48,37 +48,46 @@ module.exports = {
                     user: data.user,
                     date: data.date
                 }
-                console.log(obj)
-                collection.find(obj).toArray(function(err, rt){
-                    if(err){
-                        resovel({
-                            code: 1,
-                            msg: '数据库查询失败',
-                            data: err
-                        });
-                    }else{
-
-                        var hasHot = 0;
-                        var speedHot = 0;
-                        rt.forEach(function(item){
-                            if(item.type=="food"){
-                                hasHot += item.hot*1;
-                            }else if(item.type=='sport'){
-                                speedHot += item.hot*1;
-                            }
-                        });
-                        resovel({
-                            code: 0,
-                            msg: '查询成功',
-                            data: {
-                                hasHot: hasHot,
-                                speedHot: speedHot,
-                                sportHot: 1000,
-                                foodHot: 1000
-                            }
-                        });
-                    }
+                photoModel.getByDate(obj).then(function(photos){
+                    collection.find(obj).toArray(function(err, rt){
+                        if(err){
+                            resovel({
+                                code: 1,
+                                msg: '数据库查询失败',
+                                data: err
+                            });
+                        }else{
+                            var weight = 0;
+                            var hasHot = 0;
+                            var speedHot = 0;
+                            var photofile = (photos&&photos.file) || '';
+                            console.log(photos);
+                            rt.forEach(function(item){
+                                if(item.type=="food"){
+                                    hasHot += item.hot*1;
+                                }else if(item.type=='sport'){
+                                    speedHot += item.hot*1;
+                                }else if(item.type=='weight'){
+                                    weight = item.value;
+                                }
+                            });
+                            resovel({
+                                code: 0,
+                                msg: '查询成功',
+                                data: {
+                                    hasHot: hasHot,
+                                    speedHot: speedHot,
+                                    sportHot: 0,
+                                    foodHot: 1700,
+                                    weight: weight,
+                                    photofile: photofile
+                                }
+                            });
+                        }
+                    });
                 });
+
+
             });
         });
     },
