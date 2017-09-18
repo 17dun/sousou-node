@@ -48,6 +48,9 @@ function setMap(ctrs) {
 
     //用户管理
     router.get('/user', ctrs.user.show);
+    router.get('/user/list', ctrs.user.list);
+    router.get('/user/save', ctrs.user.save);
+    router.get('/user/del', ctrs.user.del);
     // //获取用户星系
     // router.get('/getUser', ctrs.user.get);
 

@@ -41,6 +41,7 @@ module.exports = {
     save: function *(){
         var data = this.query;
         var rs = yield recordModel.save(data);
+        recordModel.updateUserInfo(data.user);
         yield this.api(rs);
     },
 

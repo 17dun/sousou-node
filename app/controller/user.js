@@ -12,6 +12,22 @@ module.exports = {
         yield self.render('user');
     },
 
+
+    //展现页面
+    listby: function *(){
+        var self = this;
+        var rs = yield userModel.listby();
+        yield this.api(rs);
+    },
+
+    //展现页面
+    list: function *(){
+        var self = this;
+        var rs = yield userModel.list();
+        yield this.api(rs);
+    },
+
+
     //登陆
     login: function *(){
         var data = this.query;
@@ -31,7 +47,7 @@ module.exports = {
     //修改用户资料
     save: function *(){
         var data = this.query;
-        var rs = yield userModel.saveUser(data);
+        var rs = yield userModel.save(data);
         yield this.api(rs);
     },
 
@@ -39,7 +55,7 @@ module.exports = {
     //删除用户
     del: function *(){
         var data = this.query;
-        var rs = yield userModel.delUser(data);
+        var rs = yield userModel.del(data);
         yield this.api(rs);
     }
 };

@@ -72,7 +72,7 @@ zeus.page({
     getList: function(){
         var data = $('#query').serialize();
         $.ajax({
-            url: '/userList',
+            url: '/user/list',
             type: 'GET',
             dataType: 'json',
             data: data,
@@ -115,7 +115,7 @@ zeus.page({
     save: function(callback){
         var data = $('#editform').serialize();
         $.ajax({
-            url: '/saveUser',
+            url: '/user/save',
             type: 'GET',
             dataType: 'json',
             data: data,
@@ -138,7 +138,7 @@ zeus.page({
                     text: "确定", 
                     click: function(){
                         $.ajax({
-                            url: '/delUser?id='+id,
+                            url: '/user/del?id='+id,
                             type: 'GET',
                             dataType: 'json',
                             success: function(rt){

@@ -9,12 +9,14 @@ var DB_CONN_STR = require('../../conf').db;
 var ObjectId =  require('mongodb').ObjectID;
 module.exports = {
         //插入数据
-    saveUser: function(data){
+    save: function(data){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('user');
                 if(data._id){
                     data._id = ObjectId(data._id);
+                }else{
+                    delete data._id;
                 }
                 collection.save(data, function(err, rt){
                     var result = {
@@ -36,6 +38,100 @@ module.exports = {
             });
         });
     },
+
+
+    updateInfo: function(name,set){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('user');
+                console.log([{username:name},{$set:set}])
+                collection.updateOne({username:name},{$set:set},function(err, rt){
+                    console.log('okokokokokok')
+                })
+        
+    
+            });
+        });
+
+    },
+
+    del: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('user');
+                console.log(data);
+                var whereStr = {
+                    _id : ObjectId(data.id)
+                }
+                collection.remove(whereStr, function(err, rt){
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        reject(err);
+                    }
+                    if(rt.result.ok){
+                        result.msg = '写入成功';
+                    }else{
+                        result.msg = '写入失败';
+                        result.code = 1;
+                    }
+                    resovel(result);
+                });
+            });
+        });
+    },
+
+    list: function(){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('user');
+                collection.find({}).toArray(function(err, rt){
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        console.log(err);
+                        reject(err);
+                    }else{
+                        result.data = rt;
+                        resovel(result);
+                    }
+                });
+            });
+        });
+    },
+
+
+    listby: function(){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('user');
+                collection.find({}).toArray(function(err, rt){
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        console.log(err);
+                        reject(err);
+                    }else{
+                        rt.forEach(function(){
+
+                        });
+                        result.data = rt;
+                        resovel(result);
+                    }
+                });
+            });
+        });
+    },
+
     getUser: function(uid){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){

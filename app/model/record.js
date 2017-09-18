@@ -8,6 +8,7 @@ var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = require('../../conf').db;
 var ObjectId =  require('mongodb').ObjectID;
 var photoModel = require('./photo');
+var userModel = require('./user');
 module.exports = {
     list: function(data){
 
@@ -303,29 +304,41 @@ module.exports = {
                 }
 
                 collection.findOneAndUpdate({user: data.user, type: 'weight', date: data.date},data,{upsert:true}, function(){
+                    
                     resovel({
                             code: 0,
                             msg: 'ok'
                         });
                 });
-
-                // collection.find({user: data.user, type: 'weight', times: data.date}).toArray(function(err, rt){
-                //     console.log(rt)
-                //     if(err){
-                //         resovel({
-                //             code: 1,
-                //             msg: '失败'
-                //         });
-                //     }else{
-                //         resovel({
-                //             code: 0,
-                //             msg: '成功'
-                //         });
-                //     }
-                // });
             });
         });
     },
+
+    updateUserInfo: function(user){
+        var self = this;
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('record');
+                var obj = {
+                    user: user
+                };
+                collection.find(obj).toArray(function(err, rt){
+                    var date = rt[0].date
+                    var weight = 0;
+                    for(var i = rt.length-1; i>0; i--){
+                        if(rt[i].type=="weight"){
+                            weight = rt[i].value;
+                            break;
+                        }
+                    }
+                    userModel.updateInfo(user,{currentWeight:weight,date:date});
+                })
+            });
+        });
+
+
+    },
+
 
     updateById: function(data){
         var self = this;

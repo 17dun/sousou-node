@@ -5,8 +5,14 @@
      <table class="table table-bordered table-striped task-table" id="list">
         <thead>
             <tr>
-                <th width="25%">ID</th>
                 <th>用户名</th>
+                <th>头像</th>
+                <th>密码</th>
+                <th>性别</th>
+                <th>身高</th>
+                <th>初始体重</th>
+                <th>目标体重</th>
+                <th>介绍</th>
                 <th>操作</th>
             </tr>
         </thead>
@@ -25,8 +31,14 @@
 
     <script id="listTemp" type="text/x-jquery-tmpl">
         <tr data-userid="${_id}">
-            <td>${_id}</td>
             <td>${username}</td>
+            <td>${face}</td>
+            <td>${pass}</td>
+            <td>${sex}</td>
+            <td>${high}</td>
+            <td>${initWeight}</td>
+            <td>${attWeight}</td>
+            <td>${info}</td>
             <td>
                 <a href="#" type="button" class="edit-btn">修改</a> |
                 <a href="#" type="button" class="del-btn">删除</a>
@@ -37,11 +49,39 @@
     <script id="editFormTemp" type="text/x-jquery-tmpl">
         <form id="editform" role="form">
             <div class="form-group">
-              <label for="username">用户名</label>
+              <label for="username">昵称</label>
               <input type="text" class="form-control" id="username" name="username" value="${username}">
+            </div>
+            <div class="form-group">
+              <label for="pass">密码</label>
+              <input type="text" class="form-control" id="pass" name="pass" value="${pass}">
+            </div>
+             <div class="form-group">
+              <label for="sex">性别</label>
+              <input type="text" class="form-control" id="sex" name="sex" value="${sex}">
+            </div>
+             <div class="form-group">
+              <label for="high">身高</label>
+              <input type="text" class="form-control" id="high" name="high" value="${high}">
+            </div>
+             <div class="form-group">
+              <label for="initWeight">初始体重</label>
+              <input type="text" class="form-control" id="initWeight" name="initWeight" value="${initWeight}">
+            </div>
+             <div class="form-group">
+              <label for="attWeight">目标体重</label>
+              <input type="text" class="form-control" id="attWeight" name="attWeight" value="${attWeight}">
+            </div>
+             <div class="form-group">
+              <label for="info">介绍</label>
+              <input type="text" class="form-control" id="info" name="info" value="${info}">
+            </div>
+            <div class="form-group">
+              <label for="face">头像</label>
+              <input type="text" class="form-control" id="face" name="face" value="${face}">
             </div>
             <input type="hidden" value="${_id}" name="_id">
         </form>
     </script>
 
-</div>
+</div>  
