@@ -98,6 +98,11 @@ module.exports = {
                         console.log(err);
                         reject(err);
                     }else{
+                         rt.forEach(function(item, i){
+                            if(!item.currentWeight){
+                                rt[i].currentWeight = rt[i].initWeight;
+                            }
+                        });
                         result.data = rt;
                         resovel(result);
                     }
@@ -121,8 +126,10 @@ module.exports = {
                         console.log(err);
                         reject(err);
                     }else{
-                        rt.forEach(function(){
-
+                        rt.forEach(function(item, i){
+                            if(!item.currentWeight){
+                                rt[i].currentWeight = rt[i].initWeight;
+                            }
                         });
                         result.data = rt;
                         resovel(result);

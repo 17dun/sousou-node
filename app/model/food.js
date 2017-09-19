@@ -17,10 +17,19 @@ module.exports = {
             from = 0;
         }
 
+        if(data.foodNameQ){
+            var obj = {
+                foodName: {$regex: data.foodNameQ, $options:'i'}
+            }
+        }else{
+            obj = {};
+        }
+        console.log(obj)
+
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('food');
-                collection.find().skip(from).limit(pageSize).sort({_id:1}).toArray(function(err, rt){
+                collection.find(obj).skip(from).limit(pageSize).sort({_id:1}).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,

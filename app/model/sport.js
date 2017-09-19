@@ -16,11 +16,18 @@ module.exports = {
         }else{
             from = 0;
         }
-
+        
+        if(data.sportNameQ){
+            var obj = {
+                name: {$regex: data.sportNameQ, $options:'i'}
+            }
+        }else{
+            obj = {};
+        }
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('sport');
-                collection.find().skip(from).limit(pageSize).sort({_id:-1}).toArray(function(err, rt){
+                collection.find(obj).skip(from).limit(pageSize).sort({_id:-1}).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
