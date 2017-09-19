@@ -68,6 +68,8 @@ module.exports = {
         });
     },
 
+    
+
     getByDate: function(data){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db) {

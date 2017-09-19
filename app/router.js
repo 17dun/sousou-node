@@ -51,6 +51,10 @@ function setMap(ctrs) {
     router.get('/user/list', ctrs.user.list);
     router.get('/user/save', ctrs.user.save);
     router.get('/user/del', ctrs.user.del);
+    router.get('/user/updateInfo', ctrs.user.updateInfo);
+    router.get('/user/getByName', ctrs.user.getByName);
+    
+    
     // //获取用户星系
     // router.get('/getUser', ctrs.user.get);
 

@@ -62,7 +62,6 @@ module.exports = {
                             var hasHot = 0;
                             var speedHot = 0;
                             var photofile = (photos&&photos.file) || '';
-                            console.log(photos);
                             rt.forEach(function(item){
                                 if(item.type=="food"){
                                     hasHot += item.hot*1;
@@ -113,7 +112,6 @@ module.exports = {
                             var inHot = 0;
                             var outHot = 0;
                             var weight = 0;
-                            console.log(rt);
                             rt.forEach(function(item){
                                 if(item.type=="food"){
                                     inHot += item.hot*1;
@@ -158,7 +156,6 @@ module.exports = {
                             });
                         }else{
                             var rsArr = rt.concat(photos);
-                            console.log(rsArr);
                             var rtObj = {};
                             //两次循环，第一次循环没有photo，第二次处理photo。
                             var dateArr = [];
@@ -345,7 +342,6 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
-                console.log(data);
                 var _id = ObjectId(data.recordId);
                 var hot = data['hot'];
                 var weight = data['weight'];

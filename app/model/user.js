@@ -47,9 +47,7 @@ module.exports = {
                 console.log([{username:name},{$set:set}])
                 collection.updateOne({username:name},{$set:set},function(err, rt){
                     console.log('okokokokokok')
-                })
-        
-    
+                });
             });
         });
 
@@ -161,6 +159,32 @@ module.exports = {
             });
         });
     },
+
+    getByName: function(name){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('user');
+                var whereStr = {username:name}
+                collection.find(whereStr).toArray(function(err, rt){
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        reject(err);
+                    }else{
+                        rt.forEach(function(item,i){
+                            delete rt[i].pass;
+                        })
+                        result.data = rt;
+                        resovel(result);
+                    }
+                });
+            });
+        });
+    },
+
     login: function(data){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){

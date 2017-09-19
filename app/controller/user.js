@@ -38,8 +38,15 @@ module.exports = {
     //获取用户信息
     get: function *(){
         var uid = this.query.uid;
-        console.log(uid)
         var rs = yield userModel.getUser(uid);
+
+        yield this.api(rs);
+    },
+
+    //获取用户信息
+    getByName: function *(){
+        var name = this.query.name;
+        var rs = yield userModel.getByName(name);
 
         yield this.api(rs);
     },
@@ -51,6 +58,19 @@ module.exports = {
         yield this.api(rs);
     },
 
+    updateInfo: function *(){
+        var name = this.query.name;
+        console.log(this.query.set);
+        var arr = this.query.set.split(':');
+        var set = {};
+        for(var i = 0; i<arr.length; i++){
+            var keyArr = arr[i].split('-')
+            set[keyArr[0]] = keyArr[1];
+        }
+        console.log(set);
+        var rs = yield userModel.updateInfo(name, set);
+        yield this.api(rs);
+    },
 
     //删除用户
     del: function *(){
