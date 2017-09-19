@@ -47,6 +47,16 @@ module.exports = {
                 console.log([{username:name},{$set:set}])
                 collection.updateOne({username:name},{$set:set},function(err, rt){
                     console.log('okokokokokok')
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        reject(err);
+                    }else{
+                        resovel(result);
+                    }
                 });
             });
         });
