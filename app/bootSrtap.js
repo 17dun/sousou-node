@@ -56,7 +56,6 @@ app.use(function *(next) {
 
 // 设置路由
 router(app);
-route.get('/',function* (){console.log(1111)});
 
 app.use(function *error(next) {
     if (this.status === 404) {

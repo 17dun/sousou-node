@@ -46,7 +46,6 @@ module.exports = {
                 var collection = db.collection('user');
                 console.log([{username:name},{$set:set}])
                 collection.updateOne({username:name},{$set:set},function(err, rt){
-                    console.log('okokokokokok')
                     var result = {
                         code: 0,
                         msg: '',
@@ -184,9 +183,56 @@ module.exports = {
                     if(err){
                         reject(err);
                     }else{
-                        rt.forEach(function(item,i){
-                            delete rt[i].pass;
-                        })
+                        result.data = rt;
+                        resovel(result);
+                    }
+                });
+            });
+        });
+    },
+
+    fgtPass: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('user');
+                collection.find({username:data.name,email:data.email}).toArray(function(err, rt){
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        reject(err);
+                    }else{
+                        if(rt.length){
+                            result.data = rt;
+                        }else{
+                            result.code = 1;
+                        }
+                        resovel(result);
+                    }
+                });
+            });
+        });
+    },
+
+
+    reg: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('user');
+                var whereStr = {username:data.account,pass:data.password,email:data.email}
+                collection.save(whereStr, function(err, rt){
+                    console.log(rt);
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        console.log(err);
+                        reject(err);
+                    }else{
                         result.data = rt;
                         resovel(result);
                     }
@@ -199,8 +245,9 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('user');
-                var whereStr = {account:data.account,password:data.password}
+                var whereStr = {username:data.account,pass:data.password}
                 collection.find(whereStr).toArray(function(err, rt){
+                    console.log(rt);
                     var result = {
                         code: 0,
                         msg: '',

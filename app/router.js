@@ -53,12 +53,14 @@ function setMap(ctrs) {
     router.get('/user/del', ctrs.user.del);
     router.get('/user/updateInfo', ctrs.user.updateInfo);
     router.get('/user/getByName', ctrs.user.getByName);
-    
-    
+    router.get('/user/login', ctrs.user.login);
+    router.get('/user/reg', ctrs.user.reg);
+    router.get('/user/fgtPass', ctrs.user.fgtPass);
+
     // //获取用户星系
     // router.get('/getUser', ctrs.user.get);
 
-    // router.get('/login', ctrs.user.login);
+    // 
 
     // //保存用户，编辑和新注册
     // router.get('/saveUser', ctrs.user.save);

@@ -35,6 +35,13 @@ module.exports = {
         yield this.api(rs);
     },
 
+    //登陆
+    reg: function *(){
+        var data = this.query;
+        var rs = yield userModel.reg(data);
+        yield this.api(rs);
+    },
+
     //获取用户信息
     get: function *(){
         var uid = this.query.uid;
@@ -77,5 +84,16 @@ module.exports = {
         var data = this.query;
         var rs = yield userModel.del(data);
         yield this.api(rs);
+    },
+
+    //删除用户
+    fgtPass: function *(){
+        var data = this.query;
+        var rs = yield userModel.fgtPass(data);
+        if(!rs.code){
+            //修改密码，同时发邮件
+        }
+        yield this.api(rs);
+        
     }
 };
