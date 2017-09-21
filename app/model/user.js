@@ -221,22 +221,31 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('user');
-                var whereStr = {username:data.account,pass:data.password,email:data.email}
-                collection.save(whereStr, function(err, rt){
-                    console.log(rt);
+                
+                collection.find({username:data.account}).toArray(function(err, rt){
                     var result = {
                         code: 0,
                         msg: '',
                         data: null
                     };
-                    if(err){
-                        console.log(err);
-                        reject(err);
-                    }else{
-                        result.data = rt;
+                    if(rt.length > 0){
+                        result.code = 1;
+                        result.msg = '用户名已存在';
                         resovel(result);
+                    }else{
+                        var whereStr = {username:data.account,pass:data.password,email:data.email};
+                        collection.save(whereStr, function(err, rt){
+                            if(err){
+                                console.log(err);
+                                reject(err);
+                            }else{
+                                result.data = rt;
+                                resovel(result);
+                            }
+                        });
                     }
                 });
+                
             });
         });
     },
