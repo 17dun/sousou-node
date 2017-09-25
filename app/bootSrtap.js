@@ -20,6 +20,12 @@ var api = require('./libs/api');
 app.keys = ['tiancai', 'xiaoguang'];
 
 app.use(function *(next) {
+    var logid = genLogid();    
+    tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:this.userInfo})
+    yield next;
+});
+
+app.use(function *(next) {
     if(this.url == '/favicon.ico'){
         //favicon return
     }else{
@@ -48,11 +54,7 @@ if (runEnv === 'dev') {
 
 
 
-app.use(function *(next) {
-    var logid = genLogid();    
-    tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:this.userInfo})
-    yield next;
-});
+
 
 // 设置路由
 router(app);
