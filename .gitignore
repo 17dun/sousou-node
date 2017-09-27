@@ -5,5 +5,4 @@ client/src/images/
 .ide/
 .DS_Store
 app/.DS_Store
-client/src/photo/
 .idea/
