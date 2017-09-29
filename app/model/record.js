@@ -42,6 +42,19 @@ module.exports = {
     },
 
     getHotInfo: function(data){
+        function getBaseHot(data){
+            var age = 28;
+            var result = 0;
+            if(data.sex == 1){
+                //男生
+                result = 66 + data.initWeight * 13.7 + 5*175 - 6.8*age;
+            }else{
+                //女生
+                result = 655 + data.initWeight * 9.6 + 1.7*155 - 4.7*age;
+            }
+            return Math.floor(result);
+        }
+
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
@@ -50,41 +63,53 @@ module.exports = {
                     date: data.date
                 }
                 photoModel.getByDate(obj).then(function(photos){
-                    collection.find(obj).toArray(function(err, rt){
-                        if(err){
-                            resovel({
-                                code: 1,
-                                msg: '数据库查询失败',
-                                data: err
-                            });
-                        }else{
-                            var weight = 0;
-                            var hasHot = 0;
-                            var speedHot = 0;
-                            var photofile = (photos&&photos.file) || '';
-                            rt.forEach(function(item){
-                                if(item.type=="food"){
-                                    hasHot += item.hot*1;
-                                }else if(item.type=='sport'){
-                                    speedHot += item.hot*1;
-                                }else if(item.type=='weight'){
-                                    weight = item.value;
-                                }
-                            });
-                            resovel({
-                                code: 0,
-                                msg: '查询成功',
-                                data: {
-                                    hasHot: hasHot,
-                                    speedHot: speedHot,
-                                    sportHot: 0,
-                                    foodHot: 1700,
-                                    weight: weight,
-                                    photofile: photofile
-                                }
-                            });
-                        }
+                    userModel.getByName(data.user).then(function(user){
+                        collection.find(obj).toArray(function(err, rt){
+                            if(err){
+                                resovel({
+                                    code: 1,
+                                    msg: '数据库查询失败',
+                                    data: err
+                                });
+                            }else{
+                                var weight = 0;
+                                var hasHot = 0;
+                                var speedHot = 0;
+                                var photofile = (photos&&photos.file) || '';
+                                rt.forEach(function(item){
+                                    if(item.type=="food"){
+                                        hasHot += item.hot*1;
+                                    }else if(item.type=='sport'){
+                                        speedHot += item.hot*1;
+                                    }else if(item.type=='weight'){
+                                        weight = item.value;
+                                    }
+                                });
+                                resovel({
+                                    code: 0,
+                                    msg: '查询成功',
+                                    data: {
+                                        hasHot: hasHot,
+                                        speedHot: speedHot,
+                                        sportHot: 0,
+                                        foodHot: user.data[0].baseHot,
+                                        weight: weight,
+                                        photofile: photofile
+                                    }
+                                });
+                            }
+                        });
+
+
+
                     });
+
+                    
+
+
+
+
+
                 });
 
 
@@ -204,7 +229,16 @@ module.exports = {
                                     //时间排序
                                     dateArr.push(rtObj[rtItem].date);
                                     weightArr.push(rtObj[rtItem].weight);
-                                    hotArr.push(Math.floor(rtObj[rtItem].hot/100));
+                                    var perHot =  2500 - rtObj[rtItem].hot;
+                                    if(perHot<0){
+                                        perHot = 0;
+                                    }
+                                    var resultHot = (perHot/2500)*10;
+                                    if(resultHot>10){
+                                        resultHot = 10;
+                                    }
+
+                                    hotArr.push(Math.floor(resultHot));
                                     photoArr.push(rtObj[rtItem].photo);
                             }
                             weightArr.forEach(function(weightItem, i){

@@ -170,6 +170,20 @@ module.exports = {
     },
 
     getByName: function(name){
+
+        function getBaseHot(data){
+            var age = 28;
+            var result = 0;
+            if(data.sex == 1){
+                //男生
+                result = 66 + data.initWeight * 13.7 + 5*175 - 6.8*age;
+            }else{
+                //女生
+                result = 655 + data.initWeight * 9.6 + 1.7*155 - 4.7*age;
+            }
+            return Math.floor(result);
+        }
+
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('user');
@@ -183,7 +197,10 @@ module.exports = {
                     if(err){
                         reject(err);
                     }else{
+                        var baseHot = getBaseHot(rt[0]);
                         result.data = rt;
+                        result.data[0].baseHot = baseHot;
+                        console.log(baseHot);
                         resovel(result);
                     }
                 });
