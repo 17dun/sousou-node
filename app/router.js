@@ -57,6 +57,15 @@ function setMap(ctrs) {
     router.get('/user/reg', ctrs.user.reg);
     router.get('/user/fgtPass', ctrs.user.fgtPass);
 
+    //内容管理
+    router.get('/atc', ctrs.atc.show);
+    router.get('/atc/list', ctrs.atc.list);
+    router.get('/atc/save', ctrs.atc.save);
+    router.get('/atc/del', ctrs.atc.del);
+
+
+
+
     // //获取用户星系
     // router.get('/getUser', ctrs.user.get);
 
