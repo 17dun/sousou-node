@@ -19,11 +19,7 @@ var api = require('./libs/api');
 
 app.keys = ['tiancai', 'xiaoguang'];
 
-app.use(function *(next) {
-    var logid = genLogid();    
-    tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:this.userInfo})
-    yield next;
-});
+
 
 app.use(function *(next) {
     if(this.url == '/favicon.ico'){
@@ -39,7 +35,11 @@ view(app, config.view);
 // 设置api
 api(app);
 app.use(require('koa-static')(config.statics.staticRoute));
-app.use(bodyParser());
+
+
+app.use(bodyParser({
+    formLimit: '10mb'
+}));
 tclog.init();
 // live-reload代理中间件
 if (runEnv === 'dev') {
@@ -52,7 +52,11 @@ if (runEnv === 'dev') {
 }
 
 
-
+app.use(function *(next) {
+    var logid = genLogid();    
+    tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:this.userInfo})
+    yield next;
+});
 
 
 

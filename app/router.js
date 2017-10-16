@@ -60,9 +60,9 @@ function setMap(ctrs) {
     //内容管理
     router.get('/atc', ctrs.atc.show);
     router.get('/atc/list', ctrs.atc.list);
-    router.get('/atc/save', ctrs.atc.save);
+    router.post('/atc/save', ctrs.atc.save);
     router.get('/atc/del', ctrs.atc.del);
-
+    router.post('/atc/addTT', ctrs.atc.addTT);
 
 
 

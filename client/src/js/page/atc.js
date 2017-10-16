@@ -4,6 +4,7 @@
  * @author xiaoguang01
  * @date 2015/11/11
  */
+document.write('<script src="/js/libs/jquery.upload.js"></script>');
 zeus.page({
     initDatas: function () {
         self.list = [];
@@ -27,8 +28,12 @@ zeus.page({
             self.openEdit(this);
         });
 
+        $('#listBody').on('click', '.show-btn', function(){
+            self.openShow(this);
+        });
+
         $('#listBody').on('click', '.del-btn', function(){
-            var userid = $(this).parent().parent().data('userid');
+            var userid = $(this).parent().parent().data('id');
             self.del(userid);
         });
 
@@ -47,25 +52,66 @@ zeus.page({
 
     },
 
+    openShow: function(btn){
+        var index = $('.show-btn').index(btn);
+        console.log(index);
+        var data = self.list[index];
+        self.renderShow(data);
+        self.show();
+    },
+
+
     renderEdit: function(data){
         $("#editBox").html('');
         $("#editBox").html($('#editFormTemp').tmpl(data));
+        $('#dictFile').on('click', function(){
+            self.addFile();
+        });
     },
 
-    edit: function(){
-        $.ajax({
-            url: '/machineList',
-            type: 'GET',
+    renderShow: function(data){
+        $('#showTitle').html(data.title);
+        $('#showImg').attr('src', '/toutu/' + data.img + '.jpg');
+        $('#showType').html(data.type);
+        $('#showContent').html(data.contents)
+        
+    },
+
+    addFile: function(){
+        var self = this;
+        $.upload({
+            // 上传地址
+            url: '/atc/addTT',
+            // 文件域名字
+            fileName: 'file',
+            // 上传完成后, 返回json, text
             dataType: 'json',
-            data: data,
-            success: function(rt){
-                self.list = rt.data;
-                self.renderList();
-            },
-            error: function(rt){
-                self.msg(0);
+            // 上传之后回调
+            onComplate: function(data) {
+                if(data.code==0){
+                    $('#displayImg').attr('src', '/toutu/' + data.data.fileName + '.jpg');
+                    $('#imgInput').val(data.data.fileName);
+                    $('#displayBox').show();
+                }
             }
         });
+    },
+
+   
+    show: function(){
+        $('#showP').dialog({
+            title:'查看文章',
+            modal:true,
+            width:600,
+            buttons: [
+                {
+                    text: "关闭", 
+                    click: function(){
+                        $(this).dialog("close");
+                    }
+                }
+            ]
+        })
     },
 
 
@@ -89,9 +135,9 @@ zeus.page({
     renderList: function(){
         $("#listBody").html($('#listTemp').tmpl(self.list))
     },
-
+    
     add: function(){
-        $('#editBox').dialog({
+        $('#editP').dialog({
             title:'新建词典',
             modal:true,
             width:600,
@@ -113,10 +159,16 @@ zeus.page({
     },
 
     save: function(callback){
-        var data = $('#editform').serialize();
+        var data = {
+            _id: $('#ids').val(),
+            title: $('#title').val(),
+            type: $('#type').val(),
+            img: $('#imgInput').val(),
+            contents: editor.txt.html()
+        };
         $.ajax({
             url: '/atc/save',
-            type: 'GET',
+            type: 'POST',
             dataType: 'json',
             data: data,
             success: function(rt){

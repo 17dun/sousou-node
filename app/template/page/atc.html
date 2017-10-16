@@ -1,4 +1,5 @@
 <div class="content-wrap">
+   
 <form id="query" class="form-inline">
         <button type="button" class="btn btn-primary add-btn">添加文章</button>
     </form>
@@ -15,7 +16,20 @@
         </tbody>
     </table>
 
-    <div id="editBox" style="display:none;">
+    <div id="editP" style="display:none;">
+        <div id="editBox">
+
+        </div>
+         <div id="editor">
+        </div>
+    </div>
+
+
+    <div id="showP" style="display:none;">
+        <div>标题：<span id="showTitle"></span></div>
+        <div>头图 <img id="showImg" height="100" /></div>
+        <div>类型<span id="showType"></span></div>
+        <div>内容<div id="showContent"></div></div>
     </div>
 
     <div id="delBox" style="display:none;">
@@ -26,10 +40,11 @@
 
     <script id="listTemp" type="text/x-jquery-tmpl">
         <tr data-id="${_id}">
-            <td>${img}</td>
+            <td><img src="/toutu/${img}.jpg" height="100" /></td>
             <td>${title}</td>
             <td>${type}</td>
             <td>
+                <a href="#" type="button" class="show-btn">查看</a> |
                 <a href="#" type="button" class="edit-btn">修改</a> |
                 <a href="#" type="button" class="del-btn">删除</a>
             </td>
@@ -43,15 +58,29 @@
               <input type="text" class="form-control" id="title" name="title" value="${title}">
             </div>
             <div class="form-group">
-              <label for="img">头图</label>
-              <input type="text" class="form-control" id="img" name="img" value="${img}">
+            <label for="img">选择头图</label>
+            <input type="button" id="dictFile" name="dictFile" value="点击上传">
+                <div id="displayBox" style="display:none;">
+                <img id="displayImg" height="100" src="${img}" />
+                <span class="close" style="float:none;margin-top:2px;"></span>
+                <input type="hidden" id="imgInput"/>
+             </div>
+             
             </div>
              <div class="form-group">
-              <label for="type">类型</label>
+                 <label for="img">类型</label>
               <input type="text" class="form-control" id="type" name="type" value="${type}">
             </div>
-            <input type="hidden" value="${_id}" name="_id">
+            <input type="hidden" value="${_id}" id="ids" name="_id">
         </form>
+    </script>
+
+    <script type="text/javascript" src="js/wang/wangEditor.min.js"></script>
+    <script type="text/javascript">
+        var E = window.wangEditor
+        var editor = new E('#editor')
+        editor.customConfig.uploadImgShowBase64 = true 
+        editor.create()
     </script>
 
 </div>  
