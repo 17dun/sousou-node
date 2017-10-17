@@ -63,8 +63,8 @@ function setMap(ctrs) {
     router.post('/atc/save', ctrs.atc.save);
     router.get('/atc/del', ctrs.atc.del);
     router.post('/atc/addTT', ctrs.atc.addTT);
-
-
+    router.get('/atc/view', ctrs.atc.view);
+    router.get('/atc/detail', ctrs.atc.detail);
 
     // //获取用户星系
     // router.get('/getUser', ctrs.user.get);

@@ -16,6 +16,20 @@ module.exports = {
         yield self.render('atc');
     },
 
+    //展现页面
+    view: function *(){
+        var self = this;
+        yield self.render('atcview');
+    },
+
+     //展现页面
+    detail: function *(){
+        var self = this;
+        var data = this.query;
+        var rs = yield atcModel.detail(data);
+        yield this.api(rs);
+    },
+
 
     //展现页面
     list: function *(){

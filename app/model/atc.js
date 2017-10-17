@@ -88,6 +88,32 @@ module.exports = {
                 });
             });
         });
+    },
+
+    detail: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('atc');
+                var whereStr = {
+                    _id : ObjectId(data.id)
+                }
+                collection.find(whereStr).toArray(function(err, rt){
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        reject(err);
+                    }else{
+                        result.data = rt;
+                        resovel(result);
+                    }
+                });
+            });
+        });
     }
+
+
 
 }
