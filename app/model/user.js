@@ -174,12 +174,14 @@ module.exports = {
         function getBaseHot(data){
             var age = 28;
             var result = 0;
-            if(data.sex == 1){
-                //男生
-                result = 66 + data.initWeight * 13.7 + 5*175 - 6.8*age;
-            }else{
-                //女生
-                result = 655 + data.initWeight * 9.6 + 1.7*155 - 4.7*age;
+            if(data&&data.sex){
+                if(data.sex == 1){
+                    //男生
+                    result = 66 + data.initWeight * 13.7 + 5*175 - 6.8*age;
+                }else{
+                    //女生
+                    result = 655 + data.initWeight * 9.6 + 1.7*155 - 4.7*age;
+                }
             }
             return Math.floor(result);
         }
@@ -194,6 +196,7 @@ module.exports = {
                         msg: '',
                         data: null
                     };
+                    
                     if(err){
                         reject(err);
                     }else{
