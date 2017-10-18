@@ -9,6 +9,7 @@ var genLogid = require('../libs/logid').genLogid;
 var parse = require('co-busboy');
 var path = require('path');
 var fs = require('fs');
+var gm = require('gm');
 module.exports = {
 
     //显示页面
@@ -30,6 +31,8 @@ module.exports = {
         yield this.api(rs);
     },
 
+
+
     //获取详细信息
     addFile: function *(){
         var postBody = this.request.body;
@@ -38,6 +41,55 @@ module.exports = {
         var part = yield parts;
         var stream = fs.createWriteStream(path.join('./client/src/photo', fileName+'.jpg'));
         part.pipe(stream);
+
+        function genBig(){
+            return new Promise(function(resovel, reject){
+                gm('./client/src/photo/'+fileName+'.jpg')
+                    .resize(400,400)
+                    .write(path.join('./client/src/photo', fileName+'-big.jpg'), function(err){
+                        if(!err){
+                            console.log('大图处理完毕');
+                            resovel(fileName+'-big');
+                        }else{
+                            resovel(err);
+                        }
+                    });
+            });
+        }
+
+        function genSm(){
+            return new Promise(function(resovel, reject){
+                gm('./client/src/photo/'+fileName+'.jpg')
+                    .resize(50,50)
+                    .write(path.join('./client/src/photo', fileName+'-sm.jpg'), function(err){
+                        if(!err){
+                            console.log('小图处理完毕');
+                            resovel(fileName+'-sm');
+                        }else{
+                            resovel(err);
+                        }
+                    });
+            });
+        }
+
+        function delSrc(){
+            return new Promise(function(resovel, reject){
+                try{
+                    fs.unlinkSync(path.join('./client/src/photo', fileName+'.jpg'));
+                    resovel('删除原图片成功');
+                }catch(e){
+                    resovel(e);
+                }
+            });
+        }
+
+        yield genBig();
+        yield genSm();
+        yield delSrc();
+        
+        console.log('全部处理完毕');
+
+
         yield this.api({code:0,msg:'保存成功',data:{fileName:fileName}});
     },
 
@@ -58,7 +110,7 @@ module.exports = {
         var data = this.query;
         var exisFileRt = yield photoModel.getExsiFile(data);
         if(exisFileRt.code){
-            fs.unlinkSync(path.join('./client/src/photo', exisFileRt.file+'.jpg'));
+            fs.unlinkSync(path.join('./client/src/photo', exisFileRt.file+'-big.jpg'));
             yield photoModel.del({id:exisFileRt.id});
         }
         var rs = yield photoModel.save(data);
