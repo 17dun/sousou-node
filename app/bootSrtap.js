@@ -46,7 +46,7 @@ if (runEnv === 'dev') {
     app.use(function *(next) {
         yield next;
         if(this.type === 'text/html') {
-            this.body += yield this.toHtml('blocks/reload');
+            //this.body += yield this.toHtml('blocks/reload');
         }
     });
 }

@@ -20,6 +20,7 @@
     "koa-redis": "^1.0.1",
     "koa-router": "^5.1.2",
     "koa-static": "^1.4.9",
+    "koa-static-cache": "^5.1.1",
     "mongodb": "^2.2.31",
     "opn": "^3.0.3",
     "zeus-template": "*"
