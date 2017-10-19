@@ -85,7 +85,7 @@ module.exports = {
 
         yield genBig();
         yield genSm();
-        yield delSrc();
+        //yield delSrc();
         
         console.log('全部处理完毕');
 
