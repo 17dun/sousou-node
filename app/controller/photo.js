@@ -43,8 +43,9 @@ module.exports = {
         function writeSrcPic(){
             return new Promise(function(resovel, reject){
                 var stream = fs.createWriteStream(path.join('./client/src/photo', fileName+'.jpg'));
-                part.pipe(stream);
-                resovel();
+                part.pipe(stream).on('close', function(){
+                    resovel();
+                });
             });
         }
 
