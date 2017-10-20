@@ -31,8 +31,6 @@ module.exports = {
         yield this.api(rs);
     },
 
-
-
     //获取详细信息
     addFile: function *(){
         var postBody = this.request.body;
