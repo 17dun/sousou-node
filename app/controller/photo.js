@@ -39,8 +39,14 @@ module.exports = {
         var fileName = genLogid();
         var parts = parse(this);
         var part = yield parts;
-        var stream = fs.createWriteStream(path.join('./client/src/photo', fileName+'.jpg'));
-        part.pipe(stream);
+
+        function writeSrcPic(){
+            return new Promise(function(resovel, reject){
+                var stream = fs.createWriteStream(path.join('./client/src/photo', fileName+'.jpg'));
+                part.pipe(stream);
+                resovel();
+            });
+        }
 
         function genBig(){
             return new Promise(function(resovel, reject){
@@ -83,10 +89,13 @@ module.exports = {
             });
         }
 
+        yield writeSrcPic(); 
+        console.log('写入图片');
         yield genBig();
+        console.log('生成大图');
         yield genSm();
+        console.log('生成小图');
         //yield delSrc();
-        
         console.log('全部处理完毕');
 
 
