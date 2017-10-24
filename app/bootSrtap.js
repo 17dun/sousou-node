@@ -34,7 +34,7 @@ view(app, config.view);
 
 // 设置api
 api(app);
-app.use(require('koa-static')(config.statics.staticRoute));
+
 
 
 app.use(bodyParser({
@@ -63,6 +63,11 @@ app.use(function *(next) {
 // 设置路由
 router(app);
 
+app.use(require('koa-static')(config.statics.staticRoute,{
+    maxage: 1000000000000
+}));
+
+
 app.use(function *error(next) {
     if (this.status === 404) {
         yield this.render('error/404',{noWrap:true});
@@ -70,6 +75,9 @@ app.use(function *error(next) {
         yield next;
     }
 });
+
+
+
 
 app.listen(8000);
 tclog.notice('UI Server已经启动：http://127.0.0.1:8000');
