@@ -94,7 +94,6 @@ module.exports = {
         console.log('生成大图');
         yield genSm();
         console.log('生成小图');
-        //yield delSrc();
         console.log('全部处理完毕');
 
 

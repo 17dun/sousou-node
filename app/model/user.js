@@ -187,6 +187,14 @@ module.exports = {
         }
 
         return new Promise(function (resovel, reject) {
+            if(!name){
+                resovel({
+                    code: 0,
+                    msg: '',
+                    data: null
+                })
+                return;
+            }
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('user');
                 var whereStr = {username:name}
