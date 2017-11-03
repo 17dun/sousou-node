@@ -16,7 +16,7 @@ var bodyParser = require('koa-bodyparser');
 var tclog = require('./libs/tclog.js');
 var genLogid = require('./libs/logid').genLogid;
 var api = require('./libs/api');
-
+var session = require('koa-session');
 app.keys = ['tiancai', 'xiaoguang'];
 
 
@@ -52,6 +52,13 @@ if (runEnv === 'dev') {
 }
 
 
+
+
+
+app.use(require('koa-static')(config.statics.staticRoute,{
+    maxage: 1000000000000
+}));
+
 app.use(function *(next) {
     var logid = genLogid();    
     tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:this.userInfo})
@@ -59,19 +66,19 @@ app.use(function *(next) {
 });
 
 
+app.use(session(app));
 
 // 设置路由
 router(app);
 
-app.use(require('koa-static')(config.statics.staticRoute,{
-    maxage: 1000000000000
-}));
 
 
 app.use(function *error(next) {
     if (this.status === 404) {
         yield this.render('error/404',{noWrap:true});
     }else{
+        var n = this.session.views || 0;
+        this.session.views = ++n;
         yield next;
     }
 });

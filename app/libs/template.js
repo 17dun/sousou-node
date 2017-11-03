@@ -108,6 +108,7 @@ exports = module.exports = function (app, settings) {
   app.context.render = function *(view, _context) {
     var context = {
       noWrap: false,
+      isLogin: false,
       pageName: view,
       useLess: settings.useLess || false
     };
