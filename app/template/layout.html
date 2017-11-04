@@ -17,7 +17,9 @@
   </head>
   <body>
     <div class="tc-container">
-        <% include blocks/header.html %>
+        <% if(!isLogin) {%>
+            <% include blocks/header.html %>
+        <% } %>
         <div class="container-wrap-outer">
             <%- body %>
         </div>

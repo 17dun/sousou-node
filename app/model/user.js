@@ -300,6 +300,32 @@ module.exports = {
                 });
             });
         });
+    },
+
+    adminlogin: function(data){
+        return new Promise(function (resovel, reject) {
+            MongoClient.connect(DB_CONN_STR, function(err, db){
+                var collection = db.collection('admin');
+                var whereStr = {name:data.name,pass:data.pass}
+                collection.find(whereStr).toArray(function(err, rt){
+                    var result = {
+                        code: 0,
+                        msg: '',
+                        data: null
+                    };
+                    if(err){
+                        console.log(err);
+                        reject(err);
+                    }else{
+                        result.data = rt;
+                        if(!rt.length){
+                            result.code = 1;
+                        }
+                        resovel(result);
+                    }
+                });
+            });
+        });
     }
 
 }

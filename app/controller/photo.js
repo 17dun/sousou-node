@@ -14,7 +14,10 @@ module.exports = {
 
     //显示页面
     show: function *(){
-        yield this.render('photo');
+        if(!this.session.adminKey){
+            return this.redirect('/login');
+        }
+        yield this.render('photo', {adminName: this.session.adminName});
     },
 
     //获取列表

@@ -9,7 +9,10 @@ module.exports = {
 
     //显示页面
     show: function *(){
-        yield this.render('sport');
+        if(!this.session.adminKey){
+            return this.redirect('/login');
+        }
+        yield this.render('sport', {adminName: this.session.adminName});
         
     },
 

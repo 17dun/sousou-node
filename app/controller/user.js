@@ -5,13 +5,39 @@
  * @date 2016/3/7
  */
 var userModel = require('../model/user.js');
+
 module.exports = {
 	//展现页面
     show: function *(){
         var self = this;
-        yield self.render('user');
+        if(!this.session.adminKey){
+            return this.redirect('/login');
+        }
+        yield self.render('user',{adminName:this.session.adminName});
     },
 
+    //显示登陆页
+    showLogin: function *(){
+        var self = this;
+        yield self.render('login', {adminName:'', isLogin: true});
+    },
+
+    //执行登陆操作
+    adminlogin: function *(){
+        var data = this.query;
+        var rs = yield userModel.adminlogin(data);
+        if(!rs.code){
+            this.session.adminKey = rs.data[0]._id;
+            this.session.adminName = rs.data[0].name;
+        }
+        yield this.api(rs);
+    },
+
+    //执行登出
+    adminlogout: function *(){
+        this.session = null;
+        return this.redirect('/login');
+    },
 
     //展现页面
     listby: function *(){

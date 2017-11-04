@@ -9,12 +9,18 @@ module.exports = {
 
     //显示页面
     show: function *(){
-        yield this.render('food');
-        
+        console.log(this.session);
+        if(!this.session.adminKey){
+            return this.redirect('/login');
+        }
+        yield this.render('food', {adminName: this.session.adminName});
     },
 
     //获取列表
     list: function *(){
+        var n = this.session.views || 0;
+        this.session.views = ++n;
+        console.log(this.session);
         var data = this.query;
         var rs = yield foodModel.list(data);
         yield this.api(rs);

@@ -28,7 +28,9 @@ function set(app) {
 }
 
 function setMap(ctrs) {
-    router.get('/', ctrs.food.show);
+    router.get('/', ctrs.index.show);
+
+    router.get('/admin', ctrs.food.show);
 
     //食物管理
     router.get('/food', ctrs.food.show);
@@ -101,5 +103,13 @@ function setMap(ctrs) {
     router.get('/photo/save', ctrs.photo.save);
     router.get('/photo/del', ctrs.photo.del);
     router.post('/photo/delall', ctrs.photo.delall);
+
+
+    //登陆
+    router.get('/login', ctrs.user.showLogin);
+    router.get('/adminlogin', ctrs.user.adminlogin);
+    router.get('/adminlogout', ctrs.user.adminlogout);
+    
+
 }
 module.exports = set;

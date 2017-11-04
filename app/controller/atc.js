@@ -13,7 +13,10 @@ module.exports = {
 	//展现页面
     show: function *(){
         var self = this;
-        yield self.render('atc');
+        if(!this.session.adminKey){
+            return this.redirect('/login');
+        }
+        yield self.render('atc', {adminName: this.session.adminName});
     },
 
     //展现页面
