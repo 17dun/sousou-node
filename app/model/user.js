@@ -305,8 +305,8 @@ module.exports = {
     adminlogin: function(data){
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
-                var collection = db.collection('admin');
-                var whereStr = {name:data.name,pass:data.pass}
+                var collection = db.collection('adminxiaoguang');
+                var whereStr = {name:data.name,pass:data.pass};
                 collection.find(whereStr).toArray(function(err, rt){
                     var result = {
                         code: 0,
