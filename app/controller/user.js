@@ -36,7 +36,7 @@ module.exports = {
     //执行登出
     adminlogout: function *(){
         this.session = null;
-        return this.redirect('/login');
+        return this.redirect('/loginxiaoguang');
     },
 
     //展现页面

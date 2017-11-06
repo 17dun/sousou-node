@@ -24,7 +24,7 @@ zeus.page({
                 },
                 success: function(rt){
                     if(!rt.code){
-                        location.href = '/admin'
+                        location.href = '/adminxiaoguang'
                     }
                 },
                 error: function(rt){

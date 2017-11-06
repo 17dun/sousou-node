@@ -30,7 +30,7 @@ function set(app) {
 function setMap(ctrs) {
     router.get('/', ctrs.index.show);
 
-    router.get('/admin', ctrs.food.show);
+    router.get('/adminxiaoguang', ctrs.food.show);
 
     //食物管理
     router.get('/food', ctrs.food.show);
@@ -106,7 +106,7 @@ function setMap(ctrs) {
 
 
     //登陆
-    router.get('/login', ctrs.user.showLogin);
+    router.get('/loginxiaoguang', ctrs.user.showLogin);
     router.get('/adminlogin', ctrs.user.adminlogin);
     router.get('/adminlogout', ctrs.user.adminlogout);
     
