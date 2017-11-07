@@ -10,34 +10,37 @@
 
 (function() {
     'use strict';
-
-
     function parse(){
         checkAndClear();
         var rt = [];
         var mobijs = $;
         var $fds = mobijs('.food-list li');
         for(var i=0;i<$fds.length;i++){
-            var fd = $($fds[i]);
-            var name = fd.find('h4 a').html();
-            var link = fd.find('h4 a').attr('href');
-            var detail = fd.find('.text-box p').html();
-            var hot = detail.split('热量：')[1].split(' 大卡')[0];
-            var unit = detail.split('每100')[1].split(')')[0];
-            var pic = fd.find('.img-box img').attr('src');
-            if(pic.indexOf('/small/')!=-1){
-                var bigpic = pic.replace('/small/','/big/');
-            }else{
-                var bigpic = pic.replace('small.','mid.');
+            try{
+                var fd = $($fds[i]);
+                var name = fd.find('h4 a').html();
+                var link = fd.find('h4 a').attr('href');
+                var detail = fd.find('.text-box p').html();
+                var hot = detail.split('热量：')[1].split(' 大卡')[0];
+                var unit = detail.split('每100')[1].split(')')[0];
+                var pic = fd.find('.img-box img').attr('src');
+                if(pic.indexOf('/small/')!=-1){
+                    var bigpic = pic.replace('/small/','/big/');
+                }else{
+                    var bigpic = pic.replace('small.','mid.');
+                }
+                rt.push({
+                    name: name,
+                    link: link,
+                    hot: hot,
+                    unit: unit,
+                    pic: pic,
+                    bigpic: bigpic
+                });
+            }catch(e){
+                console.log('出错')
             }
-            rt.push({
-                name: name,
-                link: link,
-                hot: hot,
-                unit: unit,
-                pic: pic,
-                bigpic: bigpic
-            });
+            
         }
         var result = JSON.stringify(rt);
         var value = '';
@@ -54,8 +57,7 @@
     }
 
     function checkAndClear(){
-        var curNum = location.href.split('view_group/')[1].split('?page')[0]*1;
-        if(curNum==1){
+        if(location.href.indexOf('view_group/1?page=1')!=-1){
             localStorage.setItem(UID, '');
         }
 
