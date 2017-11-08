@@ -10,7 +10,7 @@ var ObjectId =  require('mongodb').ObjectID;
 module.exports = {
     list: function(data){
 
-        var pageSize = data.pageSize*1 || 1000;
+        var pageSize = data.pageSize*1 || 3000;
         if(data.pageNum){
             from = (data.pageNum - 1) * data.pageSize;
         }else{
@@ -29,7 +29,7 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('food');
-                collection.find(obj).skip(from).limit(pageSize).sort({_id:1}).toArray(function(err, rt){
+                collection.find(obj).skip(from).limit(pageSize).sort({_id:-1}).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
