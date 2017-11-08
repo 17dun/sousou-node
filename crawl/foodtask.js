@@ -4,7 +4,7 @@ var importNum = 0;
 var allNum = 0;
 var fileNum = 0;
     try{
-        load( './food-4.js');
+        load( './food-3.js');
         fileNum++;
         var list = list;
         print(list.length);

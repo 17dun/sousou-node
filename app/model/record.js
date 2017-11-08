@@ -22,7 +22,7 @@ module.exports = {
         return new Promise(function (resovel, reject) {
             MongoClient.connect(DB_CONN_STR, function(err, db){
                 var collection = db.collection('record');
-                collection.find(data).skip(from).limit(pageSize).toArray(function(err, rt){
+                collection.find(data).skip(from).limit(pageSize).sort({_id:-1}).toArray(function(err, rt){
                     if(err){
                         resovel({
                             code: 1,
