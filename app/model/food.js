@@ -10,7 +10,7 @@ var ObjectId =  require('mongodb').ObjectID;
 module.exports = {
     list: function(data){
 
-        var pageSize = data.pageSize*1 || 3000;
+        var pageSize = data.pageSize*1 || 500;
         if(data.pageNum){
             from = (data.pageNum - 1) * data.pageSize;
         }else{
